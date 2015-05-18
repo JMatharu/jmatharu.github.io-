@@ -93,8 +93,12 @@ a.btn-cta-secondary:hover,
   background: #3aaa64;
   font-size: 12px;
 }
-.label-theme-yellow {
+.label-theme-comingsoon {
   background: #f4a628;
+  font-size: 12px;
+}
+.label-theme-update {
+  background: #11b6f2;
   font-size: 12px;
 }
 a.dotted-link {
