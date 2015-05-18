@@ -1,5 +1,5 @@
 /*!
- * GitHub Activity Stream - v0.1.0 - 7/28/2014
+ * GITHUB Activity Stream - v0.1.0 - 7/28/2014
  * https://github.com/caseyscarborough/github-activity
  *
  * Copyright (c) 2014 Casey Scarborough
@@ -7,7 +7,7 @@
  * http://opensource.org/licenses/MIT
  */
 
-var GitHubActivity = (function() {
+var GITHUBActivity = (function() {
   'use strict';
 
   var obj = {};
@@ -18,14 +18,14 @@ var GitHubActivity = (function() {
       if (typeof(cssClass) === 'undefined') cssClass = "";
       return Mustache.render('<a class="' + cssClass + '" href="{{url}}" target="_blank">{{{title}}}</a>', { url: url, title: title });
     },
-    renderGitHubLink: function(url, title, cssClass) {
+    renderGITHUBLink: function(url, title, cssClass) {
       if (!title) { title = url; }
       if (typeof(cssClass) === 'undefined') cssClass = "";
       return methods.renderLink('https://github.com/' + url, title, cssClass);
     },
     getMessageFor: function(data) {
       var p = data.payload;
-      data.repoLink = methods.renderGitHubLink(data.repo.name);
+      data.repoLink = methods.renderGITHUBLink(data.repo.name);
       data.userGravatar = Mustache.render('<div class="gha-gravatar-user"><img src="{{url}}" class="gha-gravatar-small"></div>', { url: data.actor.avatar_url });
 
       // Get the branch name if it exists.
@@ -35,7 +35,7 @@ var GitHubActivity = (function() {
         } else {
           data.branch = p.ref;
         }
-        data.branchLink = methods.renderGitHubLink(data.repo.name + '/tree/' + data.branch, data.branch) + ' at ';
+        data.branchLink = methods.renderGITHUBLink(data.repo.name + '/tree/' + data.branch, data.branch) + ' at ';
       }
 
       // Only show the first 6 characters of the SHA of each commit if given.
@@ -55,7 +55,7 @@ var GitHubActivity = (function() {
             d.message = d.message.substring(0, 66) + '...';
           }
           if (i < 2) {
-            d.shaLink = methods.renderGitHubLink(data.repo.name + '/commit/' + d.sha, d.sha.substring(0, 6), 'gha-sha');
+            d.shaLink = methods.renderGITHUBLink(data.repo.name + '/commit/' + d.sha, d.sha.substring(0, 6), 'gha-sha');
             d.committerGravatar = Mustache.render('<img class="gha-gravatar-commit" src="https://gravatar.com/avatar/{{hash}}?s=30&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="16" />', { hash: md5(d.author.email) });
           } else {
             // Delete the rest of the commits after the first 2, and then break out of the each loop.
@@ -92,7 +92,7 @@ var GitHubActivity = (function() {
       // Get the link if this is a PullRequestReviewCommentEvent
       if (p.comment && p.comment.pull_request_url) {
         var title = data.repo.name + "#" + p.comment.pull_request_url.split('/').pop();
-        data.pullRequestLink = methods.renderGitHubLink(p.comment.pull_request_url, title);
+        data.pullRequestLink = methods.renderGITHUBLink(p.comment.pull_request_url, title);
       }
 
       // Get the comment if one exists, and trim it to 150 characters.
@@ -117,12 +117,12 @@ var GitHubActivity = (function() {
         var page = p.pages[0];
         data.actionType = page.action;
         data.message = data.actionType.charAt(0).toUpperCase() + data.actionType.slice(1) + ' ';
-        data.message += methods.renderGitHubLink(page.html_url, page.title);
+        data.message += methods.renderGITHUBLink(page.html_url, page.title);
       }
 
-      if (data.type === 'FollowEvent') data.targetLink = methods.renderGitHubLink(p.target.login);
-      if (data.type === 'ForkEvent')   data.forkLink   = methods.renderGitHubLink(p.forkee.full_name);
-      if (data.type === 'MemberEvent') data.memberLink = methods.renderGitHubLink(p.member.login);
+      if (data.type === 'FollowEvent') data.targetLink = methods.renderGITHUBLink(p.target.login);
+      if (data.type === 'ForkEvent')   data.forkLink   = methods.renderGITHUBLink(p.forkee.full_name);
+      if (data.type === 'MemberEvent') data.memberLink = methods.renderGITHUBLink(p.member.login);
 
       if (p.gist) {
         data.actionType = p.action === 'fork' ? p.action + 'ed' : p.action + 'd';
@@ -139,7 +139,7 @@ var GitHubActivity = (function() {
       } else {
         icon = icons[data.type]
       }
-      var activity = { message: message, icon: icon, timeString: timeString, userLink: methods.renderGitHubLink(data.actor.login) };
+      var activity = { message: message, icon: icon, timeString: timeString, userLink: methods.renderGITHUBLink(data.actor.login) };
 
       if (singleLineActivities.indexOf(data.type) > -1) {
         return Mustache.render(templates.SingleLineActivity, activity);
@@ -312,7 +312,7 @@ var templates = {
                  <div class="gha-user-info{{withoutName}}">{{{userNameLink}}}<p>{{{userLink}}}</p></div>\
                  <div class="gha-gravatar">{{{gravatarLink}}}</div>\
                </div><div class="gha-push"></div>',
-  Footer: '<div class="gha-footer">Public Activity <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a>',
+  Footer: '<div class="gha-footer">Public Activity <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GITHUB Activity Stream</a>',
   NoActivity: '<div class="gha-info">This user does not have any public activity yet.</div>',
   NotFound: '<div class="gha-info">User {{username}} wasn\'t found.</div>',
   CommitCommentEvent: 'commented on commit {{{commentLink}}}<br>{{{userGravatar}}}<small>{{comment}}</small>',

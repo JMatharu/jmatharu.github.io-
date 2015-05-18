@@ -1,6 +1,6 @@
-# GitHub Activity Stream Widget
+# GITHUB Activity Stream Widget
 
-This is a small Javascript plugin that creates a stream of your recent GitHub activity. It displays the user's name, username, photo, and a list of each individual activity type. Click [here](https://caseyscarborough.github.io/github-activity) for a demo.
+This is a small Javascript plugin that creates a stream of your recent GITHUB activity. It displays the user's name, username, photo, and a list of each individual activity type. Click [here](https://caseyscarborough.github.io/github-activity) for a demo.
 
 A sample image of the activity stream is shown below:
 
@@ -49,7 +49,7 @@ To use the library, begin by creating a new div with an id in the body of your p
 Then call the feed method via Javascript:
 
 ```js
-GitHubActivity.feed({
+GITHUBActivity.feed({
 	username: "your-username",
 	selector: "#feed",
 	limit: 20 // optional

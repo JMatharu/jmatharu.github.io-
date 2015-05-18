@@ -1,7 +1,7 @@
 {
-  "name": "GitHub Activity Stream",
+  "name": "GITHUB Activity Stream",
   "version": "0.1.0",
-  "description": "A widget for displaying GitHub activity for a user.",
+  "description": "A widget for displaying GITHUB activity for a user.",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "~0.4.5",

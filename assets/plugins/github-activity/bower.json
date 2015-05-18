@@ -1,12 +1,12 @@
 {
-  "name": "GitHub Activity Stream",
+  "name": "GITHUB Activity Stream",
   "main": "github-activity.js",
   "version": "0.1.0",
   "homepage": "https://github.com/caseyscarborough/github-activity",
   "authors": [
     "Casey Scarborough <caseyscarborough@gmail.com>"
   ],
-  "description": "A widget for displaying GitHub activity for a user.",
+  "description": "A widget for displaying GITHUB activity for a user.",
   "keywords": [
     "github"
   ],

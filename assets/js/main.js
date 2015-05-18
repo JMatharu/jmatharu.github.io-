@@ -54,8 +54,8 @@ jQuery(document).ready(function($) {
         }
     );
     
-    /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
-    GitHubActivity.feed({ username: "jmatharu", selector: "#ghfeed" });
+    /* GIThub Activity Feed - https://github.com/caseyscarborough/github-activity */
+    GITHUBActivity.feed({ username: "jmatharu", selector: "#ghfeed" });
 
 
 });
