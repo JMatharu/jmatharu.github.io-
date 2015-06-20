@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Linux Command Line</title>
+    <title>UNIX / Linux Command Line</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +21,14 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!--Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+    <script src="js/applinux.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,20 +52,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">JMatharu</a>
+                <a class="navbar-brand" href="/"><font color="blue">JMatharu</font></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html"><font color="red">Home</font></a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html"><font color="orange">About</font></a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html"><font color="green">Contact</font></a>
                     </li>
                 </ul>
             </div>
@@ -68,23 +76,31 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+    <header class="intro-header" style="background-image: url('img/linuxunix.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Linux / UNIX Command Line</h1>
-                        <!--                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>-->
-                        <span class="meta">Posted by <a href="/">Jagdeep Matharu</a> on June, 2015</span>
+                        <!--    <h1>Linux / UNIX Command Line</h1>-->
+
+                        <!--                        <span class="meta">Posted by <a href="/">Jagdeep Matharu</a> on June, 2015</span>-->
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
     <!-- Post Content -->
     <article>
         <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>UNIX /Linux Command Line</h1>
+                        <!--                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>-->
+                        <span class="meta">Posted by <a href="/">Jagdeep Matharu</a> on June, 2015</span>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <h2>Why Use The Command Line?</h2>
@@ -93,36 +109,744 @@
                     <p>Most computer users today are only familiar with the graphical user interface (GUI) and have been taught by vendors and pundits that the command line interface (CLI) is a terri- fying thing of the past. This is unfortunate, because a good command line interface is a marvelously expressive way of communicating with a computer in much the same way the written word is for human beings. It's been said that “graphical user interfaces make easy tasks easy, while command line interfaces make difficult tasks possible” and this is still very true today.</p>
                     <p>Since Linux is modeled after the Unix family of operating systems, it shares the same rich heritage of command line tools as Unix. Unix came into prominence during the early 1980s (although it was first developed a decade earlier), before the widespread adoption of the graphical user interface and, as a result, developed an extensive command line in- terface instead. In fact, one of the strongest reasons early adopters of Linux chose it over, say, Windows NT was the powerful command line interface which made the “difficult tasks possible.”</p>
 
-                    <h2 class="section-heading">The Final Frontier</h2>
+                    <h2 class="section-heading">Shell Commands</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Description</th>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="info">
+                                <td><code>date</code>
+                                </td>
+                                <td>Displays the current time and date</td>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+                            </tr>
+                            <tr class="success">
+                                <td><code>cal</code>
+                                </td>
+                                <td>Displays a calendar of the current month</td>
 
-                    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+                            </tr>
+                            <tr class="info">
+                                <td><code>df</code>
+                                </td>
+                                <td>To see the current amount of free space on your disk drives</td>
 
-                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+                            </tr>
+                            <tr class="success">
+                                <td><code>exit</code>
+                                </td>
+                                <td>We can end a terminal session by either closing the terminal emulator window, or by en- tering the exit command at the shell prompt</td>
 
-                    <h2 class="section-heading">Reaching for the Stars</h2>
+                            </tr>
+                            <tr class="info">
+                                <td><code>pwd</code>
+                                </td>
+                                <td>Print name of current working directory</td>
 
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+                            </tr>
+                            <tr class="success">
+                                <td><code>cd</code>
+                                </td>
+                                <td>Change directory</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>cd ..</code>
+                                </td>
+                                <td>Changes the working directory to the previous working directory</td>
 
-                    <a href="#">
-                        <img class="img-responsive" src="img/post-sample-image.jpg" alt="">
-                    </a>
-                    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+                            </tr>
+                            <tr class="success">
+                                <td><code>cd ~</code>
+                                </td>
+                                <td>Changes the working directory to the home directory of user_name.</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>ls</code>
+                                </td>
+                                <td>List directory contents</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>file</code>
+                                </td>
+                                <td>Determine file type</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>ls -l</code>
+                                </td>
+                                <td>By adding “-l” to the command, we changed the output to the long format.
+                                    <br>
+                                    <br>Common ls Options:
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Option</th>
+                                                <th>Long Option</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>-a</td>
+                                                <td>--all</td>
+                                                <td>List all files, even those with names that begin with a period, which are normally not listed (i.e., hidden).</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-A</td>
+                                                <td>--almost-all</td>
+                                                <td>Like the -a option above except it does not list . (current directory) and .. (parent directory).</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-d</td>
+                                                <td>--directory</td>
+                                                <td>Ordinarily, if a directory is specified, ls will list the contents of the directory, not the directory itself. Use this option in conjunction with the -l option to see details about the directory rather than its contents.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-F</td>
+                                                <td>--classify</td>
+                                                <td>This option will append an indicator character to the end of each listed name. For example, a “/” if the name is a directory.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-h</td>
+                                                <td>--human-readable</td>
+                                                <td>In long format listings, display file sizes in human readable format rather than in bytes.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-l</td>
+                                                <td></td>
+                                                <td>Display results in long format.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-r</td>
+                                                <td>--reverse</td>
+                                                <td>Display the results in reverse order. Normally, ls displays its results in ascending alphabetical order.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-S</td>
+                                                <td></td>
+                                                <td>Sort results by file size.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-t</td>
+                                                <td></td>
+                                                <td>Sort by modification time.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>file filename</code>
+                                </td>
+                                <td>file command will print a brief description of the file's contents.</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>less filename</code>
+                                </td>
+                                <td>less program allows you to scroll forward and backward through a text file</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>cp</code>
+                                </td>
+                                <td>Copy files and directories
+                                    <br>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Option</th>
+                                                <th>Meaning</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>-a, --archive</code>
+                                                </td>
+                                                <td>Copy the files and directories and all of their attributes, including ownerships and permissions. Normally, copies take on the default attributes of the user performing the copy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-i, --interactive</code>
+                                                </td>
+                                                <td>Before overwriting an existing file, prompt the user for confirmation. If this option is not specified, cp will silently overwrite files.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-r, --recursive</code>
+                                                </td>
+                                                <td>Recursively copy directories and their contents. This option (or the -a option) is required when copying directories.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-u, --update</code>
+                                                </td>
+                                                <td>When copying files from one directory to another, only copy files that either don't exist, or are newer than the existing corresponding files, in the destination directory.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-v, --verbose</code>
+                                                </td>
+                                                <td>Display informative messages as the copy is performed.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>mv</code>
+                                </td>
+                                <td>Move/rename files and directories
+                                    <br>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Option</th>
+                                                <th>Meaning</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>-i, --interactive</code>
+                                                </td>
+                                                <td>Before overwriting an existing file, prompt the user for confirmation. If this option is not specified, mv will silently overwrite files.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-u, --update</code>
+                                                </td>
+                                                <td>When moving files from one directory to another, only move files that either don't exist, or are newer than the existing corresponding files in the destination directory.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-v, --verbose</code>
+                                                </td>
+                                                <td>Display informative messages as the move is performed.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>mkdir</code>
+                                </td>
+                                <td>Create directories</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>rm</code>
+                                </td>
+                                <td>Remove files and directories
+                                    <br>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Option</th>
+                                                <th>Meaning</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>-i, --interactive</code>
+                                                </td>
+                                                <td>Before deleting an existing file, prompt the user for confirmation. If this option is not specified, rm will silently delete files.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-r, --recursive</code>
+                                                </td>
+                                                <td>Recursively delete directories. This means that if a directory being deleted has subdirectories, delete them too. To delete a directory, this option must be specified.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-f, --force</code>
+                                                </td>
+                                                <td>Ignore nonexistent files and do not prompt. This overrides the <code>--interactive</code> option.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>-v, --verbose</code>
+                                                </td>
+                                                <td>Display informative messages as the deletion is performed.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>ln</code>
+                                </td>
+                                <td>Create hard and symbolic links</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>type</code>
+                                </td>
+                                <td>Indicate how a command name is interpreted</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>which</code>
+                                </td>
+                                <td>Display which executable program will be executed</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>help</code>
+                                </td>
+                                <td>Get help for shell builtins</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>man</code>
+                                </td>
+                                <td>Display a command's manual page</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>apropos</code>
+                                </td>
+                                <td>Display a list of appropriate commands</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>info</code>
+                                </td>
+                                <td>Display a command's info entry</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>whatis</code>
+                                </td>
+                                <td>Display a very brief description of a command</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>alias</code>
+                                </td>
+                                <td>Create an alias for a command</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>cat</code>
+                                </td>
+                                <td>Concatenate files</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>sort</code>
+                                </td>
+                                <td>Sort lines of text</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>uniq</code>
+                                </td>
+                                <td>Report or omit repeated lines</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>grep</code>
+                                </td>
+                                <td>Print lines matching a pattern</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>wc</code>
+                                </td>
+                                <td>Print newline, word, and byte counts for each file</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>head</code>
+                                </td>
+                                <td>Output the first part of a file</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>tail</code>
+                                </td>
+                                <td>Output the last part of a file</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>tee</code>
+                                </td>
+                                <td>Read from standard input and write to standard output and files</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>echo</code>
+                                </td>
+                                <td>Display a line of text</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>clear</code>
+                                </td>
+                                <td>Clear the screen</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>history</code>
+                                </td>
+                                <td>Display the contents of the history list</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>id</code>
+                                </td>
+                                <td>Display user identity</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>chmod</code>
+                                </td>
+                                <td>Change a file's mode</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>umask</code>
+                                </td>
+                                <td>Set the default file permissions</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>su</code>
+                                </td>
+                                <td>Run a shell as another user</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>sudo</code>
+                                </td>
+                                <td>Execute a command as another user</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>chown</code>
+                                </td>
+                                <td>Change a file's owner</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>chgrp</code>
+                                </td>
+                                <td>Change a file's group ownership</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>passwd</code>
+                                </td>
+                                <td>Change a user's password</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>ps</code>
+                                </td>
+                                <td>Report a snapshot of current processes</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>top</code>
+                                </td>
+                                <td>Display tasks</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>jobs</code>
+                                </td>
+                                <td>List active jobs</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>bg</code>
+                                </td>
+                                <td>Place a job in the background</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>fg</code>
+                                </td>
+                                <td>Place a job in the foreground</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>kill</code>
+                                </td>
+                                <td>Send a signal to a process</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>killall</code>
+                                </td>
+                                <td>Kill processes by name</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>shutdown</code>
+                                </td>
+                                <td>Shutdown or reboot the system</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>printenv</code>
+                                </td>
+                                <td>Print part or all of the environment</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>set</code>
+                                </td>
+                                <td>Set shell options</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>export</code>
+                                </td>
+                                <td>Export environment to subsequently executed programs</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>alias</code>
+                                </td>
+                                <td>Create an alias for a command</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>mount</code>
+                                </td>
+                                <td>Mount a file system</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>umount</code>
+                                </td>
+                                <td>Unmount a file system</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>fsck</code>
+                                </td>
+                                <td>Check and repair a file system</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>fdisk</code>
+                                </td>
+                                <td>Partition table manipulator</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>mkfs</code>
+                                </td>
+                                <td>Create a file system</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>fdformat</code>
+                                </td>
+                                <td>Format a floppy disk</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>dd</code>
+                                </td>
+                                <td>Write block oriented data directly to a device</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>genisoimage (mkisofs)</code>
+                                </td>
+                                <td>Create an ISO 9660 image file</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>wodim (cdrecord)</code>
+                                </td>
+                                <td>Write data to optical storage media</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>md5sum</code>
+                                </td>
+                                <td>Calculate an MD5 checksum</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>ping</code>
+                                </td>
+                                <td>Send an ICMP ECHO_REQUEST to network hosts</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>traceroute</code>
+                                </td>
+                                <td>Print the route packets trace to a network host</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>netstat</code>
+                                </td>
+                                <td>Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>ftp</code>
+                                </td>
+                                <td>Internet file transfer program</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>wget</code>
+                                </td>
+                                <td>Non-interactive network downloader</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>ssh</code>
+                                </td>
+                                <td>OpenSSH SSH client (remote login program)</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>locate</code>
+                                </td>
+                                <td>Find files by name</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>find</code>
+                                </td>
+                                <td>Search for files in a directory hierarchy</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>xargs</code>
+                                </td>
+                                <td>Build and execute command lines from standard input</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>touch</code>
+                                </td>
+                                <td>Change file times</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>stat</code>
+                                </td>
+                                <td>Display file or file system status</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>gzip</code>
+                                </td>
+                                <td>Compress or expand files</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>bzip2</code>
+                                </td>
+                                <td>A block sorting file compressor</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>tar</code>
+                                </td>
+                                <td>Tape archiving utility</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>zip</code>
+                                </td>
+                                <td>Package and compress files</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>rsync</code>
+                                </td>
+                                <td>Remote file and directory synchronization</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>join</code>
+                                </td>
+                                <td>Join lines of two files on a common field</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>paste</code>
+                                </td>
+                                <td>Merge lines of files</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>cut</code>
+                                </td>
+                                <td>Remove sections from each line of files</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>comm</code>
+                                </td>
+                                <td>Compare two sorted files line by line</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>diff</code>
+                                </td>
+                                <td>Compare files line by line</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>patch</code>
+                                </td>
+                                <td>Apply a diff file to an original</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>tr</code>
+                                </td>
+                                <td>Translate or delete characters</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>sed</code>
+                                </td>
+                                <td>Stream editor for filtering and transforming text</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>nl</code>
+                                </td>
+                                <td>Number lines</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>fold</code>
+                                </td>
+                                <td>Wrap each line to a specified length</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>fmt</code>
+                                </td>
+                                <td>A simple text formatter</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>pr</code>
+                                </td>
+                                <td>Prepare text for printing</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>printf</code>
+                                </td>
+                                <td>Format and print data</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>groff</code>
+                                </td>
+                                <td>A document formatting system</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>pr</code>
+                                </td>
+                                <td>Convert text files for printing</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>lpr</code>
+                                </td>
+                                <td>Print files</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>a2ps</code>
+                                </td>
+                                <td>Format files for printing on a PostScript printer</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>lpstat</code>
+                                </td>
+                                <td>Show printer status information</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>lpq</code>
+                                </td>
+                                <td>Show printer queue status</td>
+                            </tr>
+                            <tr class="info">
+                                <td><code>lprm</code>
+                                </td>
+                                <td>Cancel print jobs</td>
+                            </tr>
+                            <tr class="success">
+                                <td><code>make</code>
+                                </td>
+                                <td>Utility to maintain programs</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-                    <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+                    <blockquote>
+                        <center>This is a small overview of commands in Linux/Unix, whick i'll say use as a startup for your Linux/Unix Experience</center>
+                    </blockquote>
+                    <!--    Comment Part-->
+                    <hr>
+                    <h2>Comments</h2>
+                    <br>
+                    <form class="form-horizontal" name="myForm" ng-app="chatApp">
+                        <div ng-controller="chatController">
+                            <ul>
+                                <li ng-repeat="message in messages">
+                                    {{message.text}} <small><small>by <b>{{message.user}}</b></small></small>
+                                    <!--                                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{getDatetime | date:'yyyy-MMM-dd, hh:mm:ss a'}}-->
+                                    <hr>
+                                </li>
+                            </ul>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="newmessage.user" class="form-control" id="inputEmail3" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Comment</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="newmessage.text" class="form-control input-lg" id="inputEmail3" placeholder="Comment" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="newmessage.email" class="form-control" id="inputEmail3" placeholder="Email (Will be kept Private)" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+                                    <span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-success" ng-click="inserisci(newmessage)" ng-disabled="myForm.$invalid">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+
     </article>
 
-    <hr>
 
     <!-- Footer -->
     <footer>
@@ -131,7 +855,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="#">
+                            <a href="https://twitter.com/JagdeepSMatharu">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -139,7 +863,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/pub/jagdeep-matharu/74/ab7/156">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/JagDeepSingh7">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -147,7 +879,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://github.com/jmatharu">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -155,7 +887,8 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="copyright text-muted">Copyright &copy;
+                        <a href="/">Jagdeep Matharu</a> 2015</p>
                 </div>
             </div>
         </div>
@@ -169,6 +902,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
+
 
 </body>
 
