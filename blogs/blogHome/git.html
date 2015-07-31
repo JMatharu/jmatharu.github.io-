@@ -28,26 +28,23 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
         <script type="text/javascript">
         var switchTo5x = true;
-    </script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">
+        </script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">
         stLight.options({
-            publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
-            doNotHash: false,
-            doNotCopy: false,
-            hashAddressBar: false
+        publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
+        doNotHash: false,
+        doNotCopy: false,
+        hashAddressBar: false
         });
-    </script>
-
-
-    <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
         var switchTo5x = true;
-    </script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+        </script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
     </head>
     <body>
         <!--https://www.siteground.com/tutorials/git/directory.htm-->
@@ -144,90 +141,96 @@
                         <h2 class="section-heading " id="setup "><span style="color: royalblue; ">GIT Repository</span></h2>
                         <p class="well"><a href="https://github.com/GitHubManagementREPO/GITTutorial">https://github.com/GitHubManagementREPO/GITTutorial</a>
                     </p>
-                    <!--    Comment Part-->
-                    <hr>
-                    <h2>Comments</h2>
-                    <br>
-                    <form class="form-horizontal" name="myForm" ng-app="chatApp">
-                        <div ng-controller="chatController">
-                            <ul>
-                                <li ng-repeat="message in messages">
-                                    {{message.text}} <small><small>by <b>{{message.user}}</b></small></small>
-                                    <!--                                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{getDatetime | date:'yyyy-MMM-dd, hh:mm:ss a'}}-->
-                                    <hr>
-                                </li>
-                            </ul>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" ng-model="newmessage.user" class="form-control" id="inputEmail3" placeholder="Name" required>
-                                </div>
+                    <!-- counter Code START -->
+                    <div align=center>
+                        <br>
+                    <p>Visitor Count <i class="fa fa-hand-o-right"></i> <img src='http://www.counter12.com/img-8595dB6W-25.gif' border='0' alt='free web counter'></a>
+                </p>
+                <script type='text/javascript' src='http://www.counter12.com/ad.js?id=8595dB6W'></script></div>
+                <!--    Comment Part-->
+                <hr>
+                <h2>Comments</h2>
+                <br>
+                <form class="form-horizontal" name="myForm" ng-app="chatApp">
+                    <div ng-controller="chatController">
+                        <ul>
+                            <li ng-repeat="message in messages">
+                                {{message.text}} <small><small>by <b>{{message.user}}</b></small></small>
+                                <!--                                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{getDatetime | date:'yyyy-MMM-dd, hh:mm:ss a'}}-->
+                                <hr>
+                            </li>
+                        </ul>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="newmessage.user" class="form-control" id="inputEmail3" placeholder="Name" required>
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Comment</label>
-                                <div class="col-sm-10">
-                                    <input type="text" ng-model="newmessage.text" class="form-control input-lg" id="inputEmail3" placeholder="Comment" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                                <div class="col-sm-10">
-                                    <input type="text" ng-model="newmessage.email" class="form-control" id="inputEmail3" placeholder="Email (Will be kept Private)" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
-                                    <span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-success" ng-click="inserisci(newmessage)" ng-disabled="myForm.$invalid">Send</button>
                         </div>
-                    </form>
-                </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Comment</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="newmessage.text" class="form-control input-lg" id="inputEmail3" placeholder="Comment" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="newmessage.email" class="form-control" id="inputEmail3" placeholder="Email (Will be kept Private)" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+                                <span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-success" ng-click="inserisci(newmessage)" ng-disabled="myForm.$invalid">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </article>
-    <hr>
-    <!-- Footer -->
-    <footer>
-        <div class="container ">
-            <div class="row ">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                    <ul class="list-inline text-center ">
-                        <li>
-                            <a href="https://twitter.com/JagdeepSMatharu ">
-                                <span class="fa-stack fa-lg ">
-                                    <i class="fa fa-circle fa-stack-2x "></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse "></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/pub/jagdeep-matharu/74/ab7/156 ">
-                                <span class="fa-stack fa-lg ">
-                                    <i class="fa fa-circle fa-stack-2x "></i>
-                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse "></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/JagDeepSingh7 ">
-                                <span class="fa-stack fa-lg ">
-                                    <i class="fa fa-circle fa-stack-2x "></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse "></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/jmatharu ">
-                                <span class="fa-stack fa-lg ">
-                                    <i class="fa fa-circle fa-stack-2x "></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse "></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted ">Copyright &copy;
-                        <a href="/ ">Jagdeep Matharu</a> 2015</p>
-                    </div>
+    </div>
+</article>
+<hr>
+<!-- Footer -->
+<footer>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <ul class="list-inline text-center ">
+                    <li>
+                        <a href="https://twitter.com/JagdeepSMatharu ">
+                            <span class="fa-stack fa-lg ">
+                                <i class="fa fa-circle fa-stack-2x "></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse "></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/pub/jagdeep-matharu/74/ab7/156 ">
+                            <span class="fa-stack fa-lg ">
+                                <i class="fa fa-circle fa-stack-2x "></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse "></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/JagDeepSingh7 ">
+                            <span class="fa-stack fa-lg ">
+                                <i class="fa fa-circle fa-stack-2x "></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse "></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jmatharu ">
+                            <span class="fa-stack fa-lg ">
+                                <i class="fa fa-circle fa-stack-2x "></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse "></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted ">Copyright &copy;
+                    <a href="/ ">Jagdeep Matharu</a> 2015</p>
                 </div>
-                  <br>
+            </div>
+            <br>
             <div class="container text-center">
                 <span class='st_sharethis_large' displayText='ShareThis'></span>
                 <span class='st_facebook_large' displayText='Facebook'></span>
@@ -242,37 +245,36 @@
                 <span class='st_tumblr_large' displayText='Tumblr'></span>
                 <span class='st_flipboard_large' displayText='Flipboard'></span>
             </div>
-            </div>
-        </footer>
-        <!-- jQuery -->
-        <script src="js/jquery.js "></script>
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js "></script>
-        <!-- Custom Theme JavaScript -->
-        <script src="js/clean-blog.min.js "></script>
-        <script type="text/javascript">
-        stLight.options({
-            publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
-            doNotHash: false,
-            doNotCopy: false,
-            hashAddressBar: false
-        });
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.js "></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js "></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js "></script>
+    <script type="text/javascript">
+    stLight.options({
+    publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
+    doNotHash: false,
+    doNotCopy: false,
+    hashAddressBar: false
+    });
     </script>
     <script>
-        var options = {
-            "publisher": "397ecdb4-80d5-4013-9922-2d7c9d615bee",
-            "position": "left",
-            "ad": {
-                "visible": false,
-                "openDelay": 5,
-                "closeDelay": 0
-            },
-            "chicklets": {
-                "items": ["facebook", "twitter", "linkedin", "googleplus", "blogger", "pinterest", "email", "sharethis", "evernote"]
-            }
-        };
-        var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+    var options = {
+    "publisher": "397ecdb4-80d5-4013-9922-2d7c9d615bee",
+    "position": "left",
+    "ad": {
+    "visible": false,
+    "openDelay": 5,
+    "closeDelay": 0
+    },
+    "chicklets": {
+    "items": ["facebook", "twitter", "linkedin", "googleplus", "blogger", "pinterest", "email", "sharethis", "evernote"]
+    }
+    };
+    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
     </script>
-
-    </body>
+</body>
 </html>
