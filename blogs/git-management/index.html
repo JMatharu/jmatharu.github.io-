@@ -3,935 +3,905 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-
-<head>
-    <title>GIT Management</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Mobile Specific Metas
-   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="github.ico">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="plugins/prism/prism.css">
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="css/styles.css">
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <script src="js/photo-gallery.js"></script>
-    <!-- Manual Scripts -->
-    <script src="css/bootstrap-lightbox.css"></script>
-    <script src="css/bootstrap-lightbox.min.css"></script>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">
+    <!--<![endif]-->
+    <head>
+        <title>GIT Management</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="github.ico">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="plugins/prism/prism.css">
+        <!-- Theme CSS -->
+        <link id="theme-style" rel="stylesheet" href="css/styles.css">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <script src="js/photo-gallery.js"></script>
+        <!-- Manual Scripts -->
+        <script src="css/bootstrap-lightbox.css"></script>
+        <script src="css/bootstrap-lightbox.min.css"></script>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">
         stLight.options({
-            publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
-            doNotHash: false,
-            doNotCopy: false,
-            hashAddressBar: false
+        publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
+        doNotHash: false,
+        doNotCopy: false,
+        hashAddressBar: false
         });
-    </script>
-    <!--Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
-    <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
-    <script src="js/appgitmanagement.js"></script>
-
-
-
-    <script type="text/javascript">
+        </script>
+        <!--Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+        <script src="js/appgitmanagement.js"></script>
+        <script type="text/javascript">
         var switchTo5x = true;
-    </script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
-
-</head>
-
-<body data-spy="scroll">
-
-    <!---//Facebook button code-->
-    <div id="fb-root"></div>
-    <script>
+        </script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+    </head>
+    <body data-spy="scroll">
+        <!---//Facebook button code-->
+        <div id="fb-root"></div>
+        <script>
         (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!-- ******HEADER****** -->
-    <header id="header" class="header">
-        <div class="container">
-            <h1 class="logo pull-left">
+        </script>
+        <!-- ******HEADER****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <h1 class="logo pull-left">
                 <a class="scrollto" href="#promo">
                     <span class="logo-title"><a href="/">JMatharu</a></span>
                 </a>
-            </h1>
-            <!--//logo-->
-            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                </h1>
+                <!--//logo-->
+                <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>
-                    <!--//nav-toggle-->
-                </div>
-                <!--//navbar-header-->
-
-                <div class="navbar-collapse collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a>
+                        </button>
+                        <!--//nav-toggle-->
+                    </div>
+                    <!--//navbar-header-->
+                    <div class="navbar-collapse collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a>
                         </li>
                         <li class="nav-item"><a href="../blogHome/index.html">Home</a>
-                        </li>
-                        <li class="nav-item"><a class="scrollto" href="#about">About</a>
-                        </li>
-                        <li class="nav-item"><a class="scrollto" href="#features">Features</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Get Started<span class="caret"></span>
-                </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#docs" class="scrollto">Get Started</a>
-                                </li>
-                                <li><a href="#goalsandteam" class="scrollto">Goals and Team</a>
-                                </li>
-                                <li><a href="#settingupGIThub" class="scrollto">Setting Up GITHUB <i class="fa fa-github"></i></a>
-                                </li>
-                                <!-- <li class="divider"></li> -->
-                                <li><a href="#settingUpSourceTree" class="scrollto">Setting Up SourceTree</a>
-                                </li>
-                                <!-- <li class="divider"></li> -->
-                                <li><a href="#teamtrick" class="scrollto">Team Trick</a>
-                                </li>
-                                <li><a href="#developersJob" class="scrollto">Developers Job</a>
-                                </li>
-                                <li><a href="#pushandPull" class="scrollto">Push and Pull</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="scrollto" href="#license">Reasons and Options</a>
-                        </li>
-                        <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a>
-                        </li>
-
-                    </ul>
-                    <!--//nav-->
-                </div>
-                <!--//navabr-collapse-->
-            </nav>
-            <!--//main-nav-->
-        </div>
-    </header>
-    <!--//header-->
-
-    <!-- ******PROMO****** -->
-    <section id="promo" class="promo section offset-header">
-        <div class="container text-center">
-            <h2 class="title">GITHUB<span class="highlight">Management</span></h2>
-            <p class="intro">"Managing GITHUB" is as important as developing code.</p>
-
-            <!--<div class="btns">
-                <a class="btn btn-cta-secondary" href="https://www.youtube.com/playlist?list=PLSg3G3hO9pnKpe40WRHVjoy5RfYq9WZmT" target="_blank">Video Tutorials</a>
-                 <a class="btn btn-cta-primary" href="http://themes.3rdwavemedia.com/website-templates/devaid-free-bootstrap-theme-developers/" target="_blank">Download</a> 
-            </div>-->
-            <ul class="meta list-inline">
-                <li><a href="https://github.com/JMatharu" target="_blank">View on GITHUB</a>
-                </li>
-                <!-- <li><a href="https://github.com/twbs/bootstrap" target="_blank">Full Documentation</a></li> -->
-                <li>Created by: <a href="/">Jagdeep Matharu</a>
-                </li>
-            </ul>
-            <!--//meta-->
-        </div>
-        <!--//container-->
-        <div class="social-media">
-            <div class="social-media-inner container text-center">
-                <ul class="list-inline">
-                    <!--  <li class="twitter-follow"><a href="https://twitter.com/3rdwave_themes" class="twitter-follow-button" data-show-count="false">Follow @3rdwave_themes</a>
-                        <script>
-                        ! function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                                p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + '://platform.twitter.com/widgets.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, 'script', 'twitter-wjs');
-                        </script>
-                    </li> -->
-                    <!--//twitter-follow-->
-                    <!-- <li class="twitter-tweet">
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="3rdwave_themes" data-hashtags="bootstrap">Tweet</a>
-                        <script>
-                        ! function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                                p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + '://platform.twitter.com/widgets.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, 'script', 'twitter-wjs');
-                        </script>
-                    </li> -->
-                    <!--//twitter-tweet-->
-                    <!--  <li class="facebook-like">
-                        <div class="fb-like" data-href="http://themes.3rdwavemedia.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-                    </li> -->
-                    <!--//facebook-like-->
-                    <!--// Generate github buttons: https://github.com/mdo/github-buttons -->
-                    <!--  <li class="github-star">
-                        <iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-                    </li> -->
-                    <!--      <li class="github-fork">
-                        <iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
-                    </li> -->
-
-                    <!--   <li class="github-follow">
-                        <iframe src="http://ghbtns.com/github-btn.html?user=JMatharu&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
                     </li>
- -->
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--//promo-->
-
-    <!-- ******ABOUT****** -->
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="title text-center">What is GIT Management?</h2>
-            <p class="intro text-center">To understand what GIT Management is, lets move a step back and understand what GIT and Version Control System is. There are tons of tutorials of GIT on Internet which tells in detail what/where/how GIT is used (One of them I like and Recommend is <a href="https://www.udacity.com/course/ud775" target="_blank">How to Use GIT and GITHUB</a> by Udacity.
-                <br>
-                <br>GIT is a free and open source distributed version control system designed to handle, track and manage code by single user or group of users.
-                <br>
-                <br>In simple words Version Control System is a <big>GIANT UNDO</big> button of your project. It just makes easy to save diffrent versions of your file at diffrent point of time, you can restore previous version and compare diffrent version. Colaboration can be done very Easily and Smoothly, lets say no more sending of sending huge ZIP files back and forth.
-                <br>
-                <br><u>Now in this tutorial I will only focusing on GIT Management rather than on Learning GIT.</u>
-                <br>
-                <br>And Also I will consider that you have basic knowledge and experience with GIT and GITHUB, if in case you don't have follow some or the GIT Tutorials that I have given link of above.</p>
-            <h2 class="intro text-center" id="Prerequisite">Prerequisite and StartUp Setup</h2>
-
-            <div class="row">
-                <div class="item col-md-4 col-sm-6 col-xs-12">
-                    <div class="icon-holder">
-                        <i class="fa fa-github"></i>
-                    </div>
-                    <div class="content">
-                        <h3 class="sub-title">Basic GIT flow</h3>
-                        <p><pre><code class="language-markup">git init</code><br><code class="language-markup">git add .</code><br><code class="language-markup">git commit</code><br><code class="language-markup">git status</code><br><code class="language-markup">git push</code><br><code class="language-markup">git branch</code><br><code class="language-markup">git pull</code></pre>
-                        </p>
-                    </div>
-                    <!--//content-->
-                </div>
-                <!--//item-->
-                <div class="item col-md-4 col-sm-6 col-xs-12">
-                    <div class="icon-holder">
-                        <i class="fa fa-tree"></i>
-                    </div>
-                    <div class="content">
-                        <h3 class="sub-title">Source Tree</h3>
-                        <p>We will use Atlassian SourceTree as our GUI client to manage our code and tracking what is the state of our project (Local an GITHUB)
-                            <br><b><u>DownLoad Here</u></b> - <a target="_blank" href="http://www.sourcetreeapp.com/download/">SourceTree</a>
-                            <br>
-                            <br>I have used other GUI (like GITHUB for <a target="_blank" href="https://windows.github.com/">Windows</a> or <a target="_blank" href="https://mac.github.com/">MAC</a>), but being honest "SourceTree" is better and pretty simple for beginners. So just trust me and stick to SourceTree <i class="fa fa-smile-o"></i> .
-                        </p>
-                    </div>
-                    <!--//content-->
-                </div>
-                <!--//item-->
-                <div class="item col-md-4 col-sm-6 col-xs-12">
-                    <div class="icon-holder">
-                        <i class="fa fa-crosshairs"></i>
-                    </div>
-                    <div class="content">
-                        <h3 class="sub-title">Configring GITHUB Account - SSH keys (Optional but Recommended)</h3>
-                        <p>Secure Shell or SSH is a network protocol that allows data to be exchanged using a secure channel between two network devices.
-                            <br>I <b>recommend</b> you to config your machine with SSH keys, that will basically provide confidentiality and integrity of data over an unsecured network.
-                            <br><b><u>How to Config for SSH</u></b> - <a target="_blank" href="https://help.github.com/articles/generating-ssh-keys/#platform-mac">MAC</a>, <a target="_blank" href="https://help.github.com/articles/generating-ssh-keys/#platform-windows">Windows</a> or <a target="_blank" href="https://help.github.com/articles/generating-ssh-keys/#platform-linux">Linux</a>
-                        </p>
-                    </div>
-                    <!--//content-->
-                </div>
-                <!--//item-->
-                <!--  <div class="clearfix visible-md"></div>
-                <div class="item col-md-4 col-sm-6 col-xs-12">
-                    <div class="icon-holder">
-                        <i class="fa fa-tablet"></i>
-                    </div>
-                    <div class="content">
-                        <h3 class="sub-title">Mobile-friendly</h3>
-                        <p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome</a> icons available.</p>
-                    </div> -->
-                <!--//content-->
-                <!-- </div> -->
-                <!--//item-->
-                <!--  <div class="item col-md-4 col-sm-6 col-xs-12">
-                    <div class="icon-holder">
-                        <i class="fa fa-code"></i>
-                    </div>
-                    <div class="content">
-                        <h3 class="sub-title">Easy to customise</h3>
-                        <p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome</a> icons available.</p>
-                    </div> -->
-                <!--//content-->
-                <!-- </div> -->
-                <!--//item-->
-                <!--   <div class="item col-md-4 col-sm-6 col-xs-12">
-                    <div class="icon-holder">
-                        <i class="fa fa-coffee"></i>
-                    </div>
-                    <div class="content">
-                        <h3 class="sub-title">LESS files included</h3>
-                        <p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome</a> icons available.</p>
-                    </div> -->
-                <!--//content-->
-                <!-- </div> -->
-                <!--//item-->
-            </div>
-            <!--//row-->
-            <!--        </div>-->
-            <!--            //container-->
-    </section>
-    <!--//about-->
-
-    <!-- ******FEATURES****** -->
-    <section id="features" class="features section">
-        <div class="container text-center">
-            <h2 class="title">Features</h2>
-            <ul class="feature-list list-unstyled">
-                <li><i class="fa fa-check"></i> Quick Guide of GITHUB for Beginners</li>
-                <li><i class="fa fa-check"></i> By Passing Terminal commands</li>
-                <li><i class="fa fa-check"></i> Understanding how GIT and GITHUB works</li>
-                <li><i class="fa fa-check"></i> Working well with Team Project</li>
-                <li><i class="fa fa-check"></i> Less issues with GIT</li>
-                <li><i class="fa fa-check"></i> Understanding the concept of GITHUB Management</li>
-            </ul>
-        </div>
-        <!--//container-->
-    </section>
-    <!--//features-->
-
-
-    <!-- ******DOCS****** -->
-    <section id="docs" class="docs section">
-        <div class="container">
-            <div class="docs-inner">
-                <h2 class="title text-center">Get Started</h2>
-                <div class="block">
-                    <p class="text-center"><i>Before I start, I want to mention that I always recommend all to use terminal, just because that gives more base knowledge to what is happening while you work with GIT.<br><br>But this tutorial is focussing on those users who are new to GIT and need to understand GITHUB management in simple and easy way.</i>
-                    </p>
-                    <p class="text-center">At this point I am assumng you have configured your machine with GIT and Source Tree. If still have any issues or confussion get back to my <a class="scrollto" href="#Prerequisite">Prerequisite</a> section above.</p>
-                    <h3 class="sub-title text-center" id="goalsandteam">Goal and Team Members In this Tutorial <i class="fa fa-hand-o-up"></i></h3>
-                    <p><big><b><u>Goal</u></b></big> of this Tutorial is to help Students who started using GITHUB for their projects and are not very much familier with how to work with team using GITHUB. This ideal situation is in Colleges/Universities team projects.</p>
-                    <p><b><big><u>Team Members</u></big></b> : Following are the team members that are most commonly there in a software projects</p>
-                    <p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;<u>ScrumMaster/Customer</u> - The ScrumMaster is responsible for making sure a Scrum team lives by the values and practices of Scrum. The ScrumMaster does anything possible to help the team perform at their highest level. This involves removing any impediments to progress, facilitating meetings, making sure the product backlog is in good shape and ready for the next sprint/iteraion</p>
-                    <p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;<u>Developers</u> - We all know what they are and what they do <i class="fa fa-smile-o"></i>
-                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Just to add to your thoughts, they say <big>"How can I make it?"</big>
-                    </p>
-                    <p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;<u>Testers</u> - We all know this as well, what they are and what they do <i class="fa fa-smile-o"></i>
-                        <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;And they say <big>"How can I Break it?"</big>
-                    </p>
-
-                    <h2 class="sub-title text-center" id="settingupGIThub">Setting Up GITHUB <i class="fa fa-github"></i></h2>
-                    <br>
-                    <p>Now lets take a step forward and if you are Team's "ScrumMaster/Customer" then go to your <a href="" target="_blank">GITHUB</a> account and Log In.</p>
-                    <p>
-                        <BLOCKQUOTE>NOTE : Step 1 to 6 is specifically for ScrumMaster/Customer.</BLOCKQUOTE>
-                    </p>
-
-                    <br>
-                    <p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;You will see screen like below that will show your UserName on top right side of NavBar, Click On the <i class="fa fa-plus"></i> icon next to it and you will see DropDown Menu, click "New organization", as shown below.
-                        <img src="images/step1.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Next to this fill details in "Create an organization" page and click "Create Organization".
-                        <img src="images/step2.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Next, Invite other GITHUB users to your organization to add them as a contributer. You can search by their GIThub UserName. When you are done with inviting other users, click "Finish".
-                        <br>
-                        <blockquote>Note : You can Add or delete Contributers later also.</blockquote>
-                        <img src="images/step3.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;Next, you can create as many Repositories in this Organization, as you want by clicking the "New repository" button(in Green). Make sure you don't select "New repository" from nav bar as seen in Step 1.
-                        <br>
-                        <blockquote>
-                            <p>All repositories created under this organzation can be Accessed/Updated by all Contributers.</p>
-                        </blockquote>
-                        <img src="images/step4.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;Next, Open "Create new Repository" page and enter fields, As shown below.
-                        <br>
-                        <blockquote>
-                            <p>Note : At this step I assume you have correctly created Organization and then Repository/Repositories in that. Now make sure you add <big><b><u>.gitignore</u></b></big> file into your Repository (It's a good GITHUB/GIT practice). You can add via GIThub(as seen below) or from your project in your machine.</p>
-                            <p>In this Tutorial I will add ".gitignore" file from my machine.</p>
-                        </blockquote>
-                        <img src="images/step5.png" class="img-responsive" alt="">
-                    </p>
-                    <p id="settingupGIThubStep6">&emsp;&emsp;<span><big>6 .</big></span>&emsp;Clicking on "Create repository" will lead you to new created repository. Note, there are some GIT commands that you see in this picture below that is basically used to sync your project on your local machine to GIThub.
-                        <img src="images/step6.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>7 .</big></span>&emsp;Now lets take a Pause from GITHUB and setup our project environment on our Local Machine and we will get back to GITHUB after that. <i class="fa fa-smile-o"></i>
-                    </p>
-                    <br>
-                    <br>
-                    <h2 class="sub-title text-center" id="settingUpSourceTree">Setting Up SourceTree</h2>
-                    <br>
-                    <p>In this section we will see how to add our Local project and config it to the newly created GITHUB repository.</p>
-                    <p>At this point you should have configured your Source tree with your User Name and Password and other configuration if needed.</p>
-                    <blockquote><big><b>For this tutorial I will use an <u>Android Project</u> as a sample project, you can use any Project as your project.</b></big>
-                    </blockquote>
-                    <p>
-                        <BLOCKQUOTE>NOTE : Step 1 to 8 is specifically for ScrumMaster/Customer.</BLOCKQUOTE>
-                    </p>
-                    <p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;First Lets Create an Empty Folder and then create a new Android Project in that specific Location.
-                        <br>
-                        <blockquote>
-                            <p>At this point you should include ".gitignore" file in your project, as I mentioned above it is a good programming/GIT practice to this file. Refer to this to create one for your project - <a href="https://www.gitignore.io/" target="_blank"><i class="fa fa-git"></i></a>
-                            </p>
-                        </blockquote>
-                    </p>
-                    <img src="images/Sourcestep1.png" class="img-responsive" alt="">
-                    <p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Now Open SourceTree and click on "File" <i class="fa fa-angle-right"></i> "New / Clone", a drop down will open with various different options as seen below.
-                        <br>
-                        <blockquote>
-                            <p>As I am using MAC OS for this tutorial, so some of the UI element will not be same as of windows, but not to fear as they all are same for MAC and Windows and are easy understandable irrespective of UI.</p>
-                        </blockquote>
-                        <img src="images/Sourcestep2.png" class="img-responsive" alt="">
-                    </p>
-                    </p>
-                    <p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Click on "Add Existing Local repository" and choose the path where you have created your project, then click OK.
-                        <br>Then "Create a local repository" dialog will open as shown below, make sure you select "GIT" in type and uncheck "Also create remort repository" as we already have our remote repository set up earlier in "Setting up GITHUB" section.</p>
-                    <img src="images/Sourcestep3.png" class="img-responsive" alt="">
-                    <p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;Now here SourceTree is having your local repository, we will get into this in deep very soon but before that lets config our local repository to the GITHUB.</p>
-                    <img src="images/Sourcestep4.png" class="img-responsive" alt="">
-                    <p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;Now just click on "Settings" on top right corner side of SourceTree (can be seen in above image)
-                        <br>And you will see a dialog box like image below.</p>
-                    <img src="images/Sourcestep5.png" class="img-responsive" alt="">
-                    <p>&emsp;&emsp;<span><big>6 .</big></span>&emsp;Now click "Add" button and then go you your GIThub account where you have created your repository (in this case its "TestGITRepo1" Refer to : <a href="#settingupGIThubStep6" class="scrollto">Step 6</a> in - Setting up GITHUB)</p>
-                    <p>&emsp;&emsp;<span><big>7 .</big></span>&emsp;Now you copy https link from <a href="#settingupGIThubStep6" class="scrollto">Step 6</a> in - "Setting up GITHUB" into Source tree, and enter name of Repository(preferably same as in GITHUB)
-                        <br>
-                        <blockquote>
-                            <p>Note : You dont need to enter Host type, Host Root URL, and UserName (as all this is automatically configured accordingly)</p>
-                        </blockquote>
-                        <img src="images/Sourcestep7.png" class="img-responsive" alt="">
-                        <br>Now click "Ok". Now you have configured local repository path to remote repository path.
-                        <br>Click Ok and we good to go.
-                        <br>
-                        <img src="images/Sourcestep7-1.png" class="img-responsive" alt="">
-                    </p>
-                    <blockquote class="text-center">
-                        <big>Noticable thing is that we havn't used any GIT command till now and believe me we won't use it next as well.</big>
-                    </blockquote>
-                    <p id="Step8SourceTree">&emsp;&emsp;<span><big>8 .</big></span>&emsp;Now lets push code to your GITHUB repository
-                        <br>
-                        <blockquote>
-                            <p>Note, that you see "TestGITRepo1" under "Remotes" on left tab - That indicates that this SourceTree repo is configurd to "TestGITRepo1" repository.</p>
-                            <img src="images/Sourcestep8.png" class="img-responsive" alt="">
-                        </blockquote>
-                        <br>Now Move your files to Staging Enviornment by clicking "Unstaged files" check button
-                        <br>
-                        <img src="images/Sourcestep8-1.png" class="img-responsive" alt="">
-                        <br>Now enter your commit message in "Commit message" text box at the bottom.
-                        <img src="images/Sourcestep8-2.png" class="img-responsive" alt="">
-                        <br>Now click the "Commit" button next to it and you see this screen when you click on "master" on side bar.
-                        <img src="images/Sourcestep8-3.png" class="img-responsive" alt="">
-                        <blockquote>
-                            <p>Lets understand what is going on here
-                                <ol>
-                                    <li>We created our Project</li>
-                                    <li>We added all files to Staging</li>
-                                    <li>We committed all added files to Staging</li>
-                                </ol>
-                            </p>
-                        </blockquote>
-                        <br>Now we want out GITHUB repository to get this code into master Branch. For that click on "master" <i class="fa fa-angle-right"></i> "Push to" <i class="fa fa-angle-right"></i> "TestGITRepo1", as shown below.
-                        <img src="images/Sourcestep8-4.png" class="img-responsive" alt="">
-                        <br>Now a dialog box will open, let every thing be on default.
-                        <img src="images/Sourcestep8-5.png" class="img-responsive" alt="">
-                        <br>Now click "Ok" and open your GIThub repository in Browser. It should show your code as in image below.
-                        <br>
-                        <blockquote>
-                            <p>Note : You may or may not be asked to enter your password of GITHUB.</p>
-                        </blockquote>
-                        <img src="images/Sourcestep8-6.png" class="img-responsive" alt="">
-                        <br>
-                        <blockquote class="text-center">
-                            <p><big><b><u>What Happened</u></b></big>
-                            </p>
-                            <p>You have created your project, commited to GIT and then Pushed the code to GITHUB into your <u>"master"</u> branch.</p>
-                        </blockquote>
-                    </p>
-                    <h2 class="sub-title text-center" id="teamtrick">Team Trick</h2>
-                    <p class="text-center"><big>We have seen that we pushed code to GIThub into master branch and out GIThub repository shows us the updated code, but the question is where other team members will push code.</big>
-                    </p>
-                    <p class="text-center"><big>Here is the Answer.</big>
-                    </p>
-                    <p>
-                        <BLOCKQUOTE>NOTE : Step 1 to 3 is specifically for ScrumMaster/Customer.</BLOCKQUOTE>
-                    </p>
-                    <p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;Now you go to your GIThub repository, click master branch and then enter the name of new branch in text field as shown below.
-                        <img src="images/Trick1.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Now the question is why are we creating new branches now, we could have done that in very first step when we created our repository.
-                        <br>The answer is clear when you will see the newly created branch.
-                        <img src="images/Trick2.png" class="img-responsive" alt="">
-                        <BLOCKQUOTE>You will see the new branches are exactly mirror image of master branch, with this we can make sure that we won't have conflict in our master branch which can be there if each developer create their own project and push to their own branch.<i class="fa fa-smile-o"></i>
-                        </BLOCKQUOTE>
-                    </p>
-                    <p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Similarly we can create as many branches as we needed, in this tutorial I will create total 2 branches.</p>
-                    <BLOCKQUOTE class="text-center">
-                        <big><b><u>Happy Note for ScrumMaster</u></b></big>
-                        <br>
-                        <big>I know until this point all work and management was done by ScrumMaster, but thats it ScrumMaster has done most part of managing GITHUB. It's turn to sit back and let developers do their code and play with GIThub. <u>Again, I said Play no Mess.</u></big>
-                    </BLOCKQUOTE>
-                    <h2 class="sub-title text-center" id="developersJob">Developers Job</h2>
-                    <p class="text-center"><big>What we did till this point?</big>
-                        <br>
-                        <ol>
-                            <li>ScrumMaster/Customer has created new repository under new organization</li>
-                            <li>Pushed first commited code to master branch of created repository</li>
-                            <li>Created new branchs on GIThub</li>
-                        </ol>
-                        <br><b>Now here is the next step towards our Final Goal but before that each Team Member need to understand these following important thing :
-                        <ol>
-                            <li><u>Master Branch is the branch where team will have its latest and greatest code</u>, that basically means that less buggy and more user accepted code.</li>
-                            <li><u>Developers should not push their code directly to master</u> branch.</li>
-                            <li>Each <u>developer should push their code to their respective assigned branches</u> only.</li>
-                            <li>Each <u>developer should pull code from master branch before they start new task</u>, or even better should pull code from master branch once a day.</li>
-                        </ol></b>
-                        <br>
-                        <p>
-                            <BLOCKQUOTE>NOTE : Step 1 to 5 is specifically for Developers.</BLOCKQUOTE>
-                        </p>
-                        <br>
-                        <p class="text-center">Now lets get back to what we were doing. Following steps are for <big><b><u>Developers</u></b></big><i class="fa fa-smile-o"></i>
-                        </p>
-                    </p>
-                    <p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;At this point Developer has branches into their GITHUB account but dont have similar code in their local machine.
-                        <br>So the first step will be that they sync remote repository to their local machine so that they can start their work.
-                        <br>Now Open SourceTree and click on "File" <i class="fa fa-angle-right"></i> "New / Clone", a drop down will open with various different options as seen below.
-                        <img src="images/Sourcestep2.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;This time click on "Clone from URL", and you will see a dialog box somthing like this.
-                        <img src="images/DevelopersJob2.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Now Go to GITHUB and copy HTTPS URL from right sidebar as seen in Image.
-                        <img src="images/DevelopersJob3.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;Now copy that URl to "Source URL", add "Destination Path" as you like (must be an empty folder) and Name of repository.
-                        <br>You can check out from different branches via going to Advance Options.
-                        <img src="images/DevelopersJob4.png" class="img-responsive" alt="">
-                        <br>Now click "Clone".
-                    </p>
-                    <p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;Lets see how your SourceTree looks like when you pulled all code from GIThub, and lets understand what is going on.
-                        <img src="images/DevelopersJob5.png" class="img-responsive" alt="">
-                        <br>See Left sidebar
-                        <ol>
-                            <li>Under Branches we have "master", that basically is the your local GIT branch on which you currently are.</li>
-                            <li>Under "origin" you see all the remote branches (One developer to one branch for entire project and no pushing or messing around with others branch <i class="fa fa-smile-o"></i>)</li>
-                            <li>Description box - that all remote branches (master, Developer_branch1, Developer_branch2) are same with your HEAD (your Local Branch)</li>
-                        </ol>
-                    </p>
-                    <h2 class="sub-title text-center" id="pushandPull">Push And Pull (Developers Job)</h2>
-                    <p class="text-center"><big>Now at this point ScrumMaster has latest code in its local repository and in Remote master Branch. And so as Developers have same code in their Local and Remote branches.<br>Now as a developer lets make some changes into our local branch and see what happens next.</big>
-                    </p>
-                    <p class="text-center">
-                        <blockquote>Note : Developers usually are assigned with some tasks and and according to that they make changes that they have completed some tasks that are assigned to them.</blockquote>
-                    </p>
-                    <p>
-                        <BLOCKQUOTE>NOTE : Step 1 to 8 is specifically for Developers.</BLOCKQUOTE>
-                    </p>
-                    <p id="Step1PushPull">&emsp;&emsp;<span><big>1 .</big></span>&emsp;Lets say as a developer you completed your task and have done <a href="http://searchsoftwarequality.techtarget.com/definition/unit-testing" target="_blank">Unit Testing</a> on your code and now you want your GIThub repository to have this updated code.
-                        <br>Here is how your SourceTree looks when you update project
-                        <img src="images/pushandPull1.png" class="img-responsive" alt="">
-                        <br>Lets explain what you see here
-                        <br>
-                        <ol>
-                            <li>You can see some uncommited files under Unstaged Section in lower section image, these are the files that are modified</li>
-                            <li>On lower right side you see your updated code that you updated(in this case its just dummy <i class="fa fa-smile-o"></i>)</li>
-                            <li>Under Description box you see its written "Uncommitted changes", that means you have some uncommited files on your local branch</li>
-                        </ol>
-                    </p>
-                    <p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Now add files to staging and then commit with a commit message as in image below, make sure "Push changes immediately to origin/Master" is unchecked and you don't push at this point.
-                        <img src="images/pushandPull2.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;After you commit you see the Description box shows you are 1 commit ahead of master, and also shows your commit message.
-                        <img src="images/pushandPull3.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;It's time to push code.
-                        <br>You go to Branches(loacal) <i class="fa fa-angle-right"></i> master <i class="fa fa-angle-right"></i>Push to <i class="fa fa-angle-right"></i> origin
-                        <img src="images/pushandPull4.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;A dialog box will open. Under Remote branch you will see all remote branches.
-                        <br>Select the one that belongs to you.
-                        <br>And press "Ok"
-                        <img src="images/pushandPull5.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>6 .</big></span>&emsp;Now go to GITHUB to your repository, you will see something like below.
-                        <img src="images/pushandPull6.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>7 .</big></span>&emsp;Click on "Compare and Pull request"
-                        <br>You will see something like below
-                        <img src="images/pushandPull7.png" class="img-responsive" alt="">
-                    </p>
-                    <p id="Step8PushPull">&emsp;&emsp;<span><big>8 .</big></span>&emsp;Now click on "Create pull request" (You can add Write comments to this pull request before you want to create one)
-                        <br>Now you will see something like this
-                        <br>This Pull request can be assigned to ScrumMaster/Customer by clicking on Assignee and then assign him/her this task.
-                        <br><big>In any case only ScrumMaster should do next steps on Pull request</big>
-                        <img src="images/pushandPull8.png" class="img-responsive" alt="">
-                    </p>
-                    <p class="text-center">
-                        <blockquote class="text-center">
-                            <p><b><big>Up to this step Developer has pushed code and then send a Pull Request to ScrumMaster</big></b>
-                            </p>
-                            <p><b><big>Now From Step 9 to <a href="">asdahsgdjhags</a> ScrumMaster/Customer is back on work.</big></b>
-                            </p>
-                        </blockquote>
-                    </p>
-                    <p id="Step9PushPull">&emsp;&emsp;<span><big>9 .</big></span>&emsp;Now ScrumMaster will see 1 Pull request on right side bar as in image below
-                        <img src="images/pushandPull9.png" class="img-responsive" alt="">
-                        <br>ScrumMaster clicks on that pull request, and opens that pull request as in image below
-                        <br>
-                        <blockquote>
-                            <p>Note : If there is any conflict then GITHUB will block "Merge pull request" button, so to avoid this make sure you understand what the flow is</p>
-                        </blockquote>
-                        <img src="images/pushandPull10.png" class="img-responsive" alt="">
-                        <br>Now if ScrumMaster wants to check code (if its according to task given) then ScrumMaster can click on "File Changed" and view code. Otherwise ScrumMaster clicks on "Merge pull request" and then can "Confirm merge"
-                        <img src="images/pushandPull11.png" class="img-responsive" alt="">
-                        <br>Now When ScrumMaster see repository home page it should show you the added code (you can check from comment"First Developer Push") like in image below.
-                        <img src="images/pushandPull12.png" class="img-responsive" alt="">
-                    </p>
-                    <blockquote>
-                        <p>What happened till now
-                            <ol>
-                                <li>Developer 1 Pushed code to its Remote Branch</li>
-                                <li>Gave Pull request to ScrumMaster/Customer</li>
-                                <li>ScrumMaster then Compare the Code and Merge Request</li>
-                            </ol>
-                            <big><b>So we can say now Master Branch has code of First commit and Commit made by Developer 1, in short <u>master branch has latest and greatest code</u></b></big>
-                        </p>
-                    </blockquote>
-                    <p>&emsp;&emsp;<span><big>10 .</big></span>&emsp;Now Developer 2 will pull code from this latest Remote master into its local repository and will get the latest code which includes the code from Developer 1 as well.
-                        <br>You will get a dialog box asking you to confirm pull, hit "Ok"
-                        <img src="images/pushandPull13.png" class="img-responsive" alt="">
-                    </p>
-                    <p>&emsp;&emsp;<span><big>11 .</big></span>&emsp;Now Developer 2 will complete his/her task and Now Developer 2 will repeat same steps as did by Developer 1 from <a href="#Step1PushPull" class="scrollto">Step 1</a> to <a href="#Step8PushPull" class="scrollto">Step 8</a> above.</p>
-                    <p>&emsp;&emsp;<span><big>12 .</big></span>&emsp;After Developer 2 completes step 1 - 8 then ScrumMaster will repeat <a href="#Step9PushPull" class="scrollto">Step 9</a>
-                    </p>
-                    <blockquote class="text-center"><big><b>This loop between <a href="#Step1PushPull" class="scrollto">Step 1</a> to <a href="#Step9PushPull" class="scrollto">Step 9</a> should be there between each developers and ScrumMaster through out the project<br>This makes sure that your master Branch has latest and greatest code for your Release.</b></big>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--//features-->
-
-    <!-- ******LICENSE****** -->
-    <section id="license" class="license section">
-        <div class="container">
-            <div class="license-inner">
-                <h2 class="title text-center">Reasons and Options</h2>
-                <div class="info">
-                    <p>The Basic reason of using this method over "fork and pull"
-                        <br>
-                        <ol>
-                            <li>Gives you better understanding of GIT and GIThub</li>
-                            <li>Lets you organize in smooth way, as ScrumMaster is the only who will merge code, so you get less buggy code</li>
-                            <li>Less pain in understanding code and who is working on what</li>
-                            <li>And Fun <i class="fa fa-smile-o"></i>
-                            </li>
-                        </ol>
-                    </p>
-                </div>
-                <!--//info-->
-                <!-- <div class="cta-container">
-                    <div class="speech-bubble">
-                        <p class="intro">If you are feeling generous and want to show your support to Xiaoying, you can buy her a beer or coffee via the PayPal donate button below. :)</p>
-                        <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i>
-                        </div>
-                    </div> -->
-                <!--//speech-bubble-->
-                <!-- <div class="btn-container  text-center"> -->
-                <!--//You need to generate your own PayPal button - https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside -->
-                <!--PayPal generated code starts-->
-                <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="Y46LJNXGAVVWW">
-                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-                        </form> -->
-                <!--//PayPal generated code ends-->
-
-                <!-- </div> -->
-                <!--//btn-container-->
-                <!-- </div>  -->
-                <!--//cta-container-->
-            </div>
-            <!--//license-inner-->
-        </div>
-        <!--//container-->
-    </section>
-    <!--//how-->
-
-    <!-- ******CONTACT****** -->
-    <section id="contact" class="contact section has-pattern">
-        <div class="container">
-            <div class="contact-inner">
-                <h2 class="title  text-center">Contact</h2>
-                <p class="intro  text-center">I hope you find this tutorial useful.
-                    <br />Feel free to get in touch if you have any questions or suggestions.</p>
-                <div class="author-message">
-                    <div class="profile">
-                        <img class="img-responsive" src="images/profile.jpg" alt="" />
-                    </div>
-                    <!--//profile-->
-                    <div class="speech-bubble">
-                        <h3 class="sub-title">Get in Touch</h3>
-                        <p>If you like what I do, you can mail me on <a href="mailto:jagdeepmatharu@gmail.com">JagdeepMatharu88@gmail.com</a> or follow me on <a href="https://github.com/jmatharu" target="_blank">GITHUB</a> and I will keep you informed about my next tutorial <i class="fa fa-smile-o"></i>
-                        </p>
-                        <p><strong>Tip for Teams:</strong> You will learn step by step, be patient and focused on work that you do, Managing GIThub is pretty simple and pain at same time. All that decide what it will be is "How good you understand GITHUB/GIT flow" and ofcourse "What your professor wants <i class="fa fa-smile-o"></i>"</p>
-                        <div class="source">
-                            <span class="name"><a href="/">Jagdeep Matharu</a></span>
-                            <br />
-                            <span class="title">Tester / Developer / FreeLancer</span>
-                        </div>
-                        <!--//source-->
-                    </div>
-                    <!--//speech-bubble-->
-                </div>
-                <!--//author-message-->
-                <div class="clearfix"></div>
-                <div class="info text-center">
-                    <h4 class="sub-title">Get Connected</h4>
-                    <ul class="social-icons list-inline">
-                        <li><a href="https://github.com/jmatharu" target="_blank"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/JagDeepSingh7" target="_blank"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/pub/jagdeep-matharu/74/ab7/156"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li><a href="https://instagram.com/jmatharu88/"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li class="last"><a href="mailto:jagdeepmatharu@gmail.com"><i class="fa fa-envelope"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <!--//info-->
-            </div>
-            <!--//contact-inner-->
-        </div>
-        <!--//container-->
-    </section>
-    <!--//contact-->
-
-    <!-- counter Code START -->
-    <div align=center>
-        <br>
-        <p>Visitor Count <i class="fa fa-hand-o-right"></i> <img src='http://www.counter12.com/img-AccZZy5w-2.gif' border='2' alt='free counter'>
-        </p>
-        <script type='text/javascript' src='http://www.counter12.com/ad.js?id=AccZZy5w'></script>
-    </div>
-
-    <!-- ******LICENSE****** -->
-    <section id="license" class="license section">
-        <div class="container">
-            <div class="license-inner">
-                <h2 class="title text-center">Comments</h2>
-                <form class="form-horizontal" name="myForm" ng-app="chatApp">
-                    <div ng-controller="chatController">
-                        <ul>
-                            <li ng-repeat="message in messages">
-                                {{message.text}} <small><small>by <b>{{message.user}}</b></small></small>
-                                <!--                                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{getDatetime | date:'yyyy-MMM-dd, hh:mm:ss a'}}-->
-                                <hr>
-                            </li>
-                        </ul>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" ng-model="newmessage.user" class="form-control" id="inputEmail3" placeholder="Name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Comment</label>
-                            <div class="col-sm-10">
-                                <input type="text" ng-model="newmessage.text" class="form-control input-lg" id="inputEmail3" placeholder="Comment" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="text" ng-model="newmessage.email" class="form-control" id="inputEmail3" placeholder="Email (Will be kept Private)" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
-                                <span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-success" ng-click="inserisci(newmessage)" ng-disabled="myForm.$invalid">Send</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-
-        <!--//container-->
-    </section>
-
-    <!-- ******FOOTER****** -->
-    <footer class="footer">
-        <div class="container text-center">
-            <small class="copyright">Tutorial Created by <a href="/" >Jagdeep Matharu</a></small>
-
-        </div>
-        <div class="container text-center">
-            <span class='st_sharethis_large' displayText='ShareThis'></span>
-            <span class='st_facebook_large' displayText='Facebook'></span>
-            <span class='st_twitter_large' displayText='Tweet'></span>
-            <span class='st_googleplus_large' displayText='Google +'></span>
-            <span class='st_linkedin_large' displayText='LinkedIn'></span>
-            <span class='st_evernote_large' displayText='Evernote'></span>
-            <span class='st_pinterest_large' displayText='Pinterest'></span>
-            <span class='st_blogger_large' displayText='Blogger'></span>
-            <span class='st_email_large' displayText='Email'></span>
-            <span class='st_whatsapp_large' displayText='WhatsApp'></span>
-            <span class='st_tumblr_large' displayText='Tumblr'></span>
-            <span class='st_flipboard_large' displayText='Flipboard'></span>
-        </div>
-
-
-        <!--//container-->
-    </footer>
-    <!--//footer-->
-
-    <!-- Javascript -->
-    <script type="text/javascript" src="plugins/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="plugins/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="plugins/prism/prism.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <!-- Manual JavaScript -->
-    <script type="text/javascript" src="js/bootstrap-lightbox.js"></script>
-    <script type="text/javascript" src="js/bootstrap-lightbox.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function ($) {
-
-            // delegate calls to data-toggle="lightbox"
-            $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function (event) {
-                event.preventDefault();
-                return $(this).ekkoLightbox({
-                    onShown: function () {
-                        if (window.console) {
-                            return console.log('Checking our the events huh?');
-                        }
-                    },
-                    onNavigate: function (direction, itemIndex) {
-                        if (window.console) {
-                            return console.log('Navigating ' + direction + '. Current item: ' + itemIndex);
-                        }
-                    }
-                });
-            });
-
-            //Programatically call
-            $('#open-image').click(function (e) {
-                e.preventDefault();
-                $(this).ekkoLightbox();
-            });
-            $('#open-youtube').click(function (e) {
-                e.preventDefault();
-                $(this).ekkoLightbox();
-            });
-
-            $(document).delegate('*[data-gallery="navigateTo"]', 'click', function (event) {
-                event.preventDefault();
-                return $(this).ekkoLightbox({
-                    onShown: function () {
-                        var a = this.modal_content.find('.modal-footer a');
-                        if (a.length > 0) {
-                            a.click(function (e) {
-                                e.preventDefault();
-                                this.navigateTo(2);
-                            }.bind(this));
-                        }
-                    }
-                });
-            });
-
-        });
-    </script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-43208246-2', 'ashleydw.github.io');
-        ga('send', 'pageview');
-    </script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
-    <script type="text/javascript">
-        stLight.options({
-            publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
-            doNotHash: false,
-            doNotCopy: false,
-            hashAddressBar: false
-        });
-    </script>
-    <script>
-        var options = {
-            "publisher": "397ecdb4-80d5-4013-9922-2d7c9d615bee",
-            "position": "left",
-            "ad": {
-                "visible": false,
-                "openDelay": 5,
-                "closeDelay": 0
-            },
-            "chicklets": {
-                "items": ["facebook", "twitter", "linkedin", "googleplus", "blogger", "pinterest", "email", "sharethis", "evernote"]
-            }
-        };
-        var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-    </script>
-
+                    <li class="nav-item"><a class="scrollto" href="#about">About</a>
+                </li>
+                <li class="nav-item"><a class="scrollto" href="#features">Features</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Get Started<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#docs" class="scrollto">Get Started</a>
+            </li>
+            <li><a href="#goalsandteam" class="scrollto">Goals and Team</a>
+        </li>
+        <li><a href="#settingupGIThub" class="scrollto">Setting Up GITHUB <i class="fa fa-github"></i></a>
+    </li>
+    <!-- <li class="divider"></li> -->
+    <li><a href="#settingUpSourceTree" class="scrollto">Setting Up SourceTree</a>
+</li>
+<!-- <li class="divider"></li> -->
+<li><a href="#teamtrick" class="scrollto">Team Trick</a>
+</li>
+<li><a href="#developersJob" class="scrollto">Developers Job</a>
+</li>
+<li><a href="#pushandPull" class="scrollto">Push and Pull</a>
+</li>
+</ul>
+</li>
+<li class="nav-item"><a class="scrollto" href="#license">Reasons and Options</a>
+</li>
+<li class="nav-item last"><a class="scrollto" href="#contact">Contact</a>
+</li>
+</ul>
+<!--//nav-->
+</div>
+<!--//navabr-collapse-->
+</nav>
+<!--//main-nav-->
+</div>
+</header>
+<!--//header-->
+<!-- ******PROMO****** -->
+<section id="promo" class="promo section offset-header">
+<div class="container text-center">
+<h2 class="title">GITHUB<span class="highlight">Management</span></h2>
+<p class="intro">"Managing GITHUB" is as important as developing code.</p>
+<!--<div class="btns">
+<a class="btn btn-cta-secondary" href="https://www.youtube.com/playlist?list=PLSg3G3hO9pnKpe40WRHVjoy5RfYq9WZmT" target="_blank">Video Tutorials</a>
+<a class="btn btn-cta-primary" href="http://themes.3rdwavemedia.com/website-templates/devaid-free-bootstrap-theme-developers/" target="_blank">Download</a>
+</div>-->
+<ul class="meta list-inline">
+<li><a href="https://github.com/JMatharu" target="_blank">View on GITHUB</a>
+</li>
+<!-- <li><a href="https://github.com/twbs/bootstrap" target="_blank">Full Documentation</a></li> -->
+<li>Created by: <a href="/">Jagdeep Matharu</a>
+</li>
+</ul>
+<!--//meta-->
+</div>
+<!--//container-->
+<div class="social-media">
+<div class="social-media-inner container text-center">
+<ul class="list-inline">
+<!--  <li class="twitter-follow"><a href="https://twitter.com/3rdwave_themes" class="twitter-follow-button" data-show-count="false">Follow @3rdwave_themes</a>
+<script>
+! function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0],
+p = /^http:/.test(d.location) ? 'http' : 'https';
+if (!d.getElementById(id)) {
+js = d.createElement(s);
+js.id = id;
+js.src = p + '://platform.twitter.com/widgets.js';
+fjs.parentNode.insertBefore(js, fjs);
+}
+}(document, 'script', 'twitter-wjs');
+</script>
+</li> -->
+<!--//twitter-follow-->
+<!-- <li class="twitter-tweet">
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="3rdwave_themes" data-hashtags="bootstrap">Tweet</a>
+<script>
+! function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0],
+p = /^http:/.test(d.location) ? 'http' : 'https';
+if (!d.getElementById(id)) {
+js = d.createElement(s);
+js.id = id;
+js.src = p + '://platform.twitter.com/widgets.js';
+fjs.parentNode.insertBefore(js, fjs);
+}
+}(document, 'script', 'twitter-wjs');
+</script>
+</li> -->
+<!--//twitter-tweet-->
+<!--  <li class="facebook-like">
+<div class="fb-like" data-href="http://themes.3rdwavemedia.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+</li> -->
+<!--//facebook-like-->
+<!--// Generate github buttons: https://github.com/mdo/github-buttons -->
+<!--  <li class="github-star">
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+</li> -->
+<!--      <li class="github-fork">
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
+</li> -->
+<!--   <li class="github-follow">
+<iframe src="http://ghbtns.com/github-btn.html?user=JMatharu&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
+</li>
+-->
+</ul>
+</div>
+</div>
+</section>
+<!--//promo-->
+<!-- ******ABOUT****** -->
+<section id="about" class="about section">
+<div class="container">
+<!-- Ad Code -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad1_GitManagement -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-2883101191514056"
+data-ad-slot="9836310120"
+data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- End Ad Code -->
+<h2 class="title text-center">What is GIT Management?</h2>
+<p class="intro text-center">To understand what GIT Management is, lets move a step back and understand what GIT and Version Control System is. There are tons of tutorials of GIT on Internet which tells in detail what/where/how GIT is used (One of them I like and Recommend is <a href="https://www.udacity.com/course/ud775" target="_blank">How to Use GIT and GITHUB</a> by Udacity.
+<br>
+<br>GIT is a free and open source distributed version control system designed to handle, track and manage code by single user or group of users.
+<br>
+<br>In simple words Version Control System is a <big>GIANT UNDO</big> button of your project. It just makes easy to save diffrent versions of your file at diffrent point of time, you can restore previous version and compare diffrent version. Colaboration can be done very Easily and Smoothly, lets say no more sending of sending huge ZIP files back and forth.
+<br>
+<br><u>Now in this tutorial I will only focusing on GIT Management rather than on Learning GIT.</u>
+<br>
+<br>And Also I will consider that you have basic knowledge and experience with GIT and GITHUB, if in case you don't have follow some or the GIT Tutorials that I have given link of above.</p>
+<h2 class="intro text-center" id="Prerequisite">Prerequisite and StartUp Setup</h2>
+<div class="row">
+<div class="item col-md-4 col-sm-6 col-xs-12">
+<div class="icon-holder">
+<i class="fa fa-github"></i>
+</div>
+<div class="content">
+<h3 class="sub-title">Basic GIT flow</h3>
+<p><pre><code class="language-markup">git init</code><br><code class="language-markup">git add .</code><br><code class="language-markup">git commit</code><br><code class="language-markup">git status</code><br><code class="language-markup">git push</code><br><code class="language-markup">git branch</code><br><code class="language-markup">git pull</code></pre>
+</p>
+</div>
+<!--//content-->
+</div>
+<!--//item-->
+<div class="item col-md-4 col-sm-6 col-xs-12">
+<div class="icon-holder">
+<i class="fa fa-tree"></i>
+</div>
+<div class="content">
+<h3 class="sub-title">Source Tree</h3>
+<p>We will use Atlassian SourceTree as our GUI client to manage our code and tracking what is the state of our project (Local an GITHUB)
+<br><b><u>DownLoad Here</u></b> - <a target="_blank" href="http://www.sourcetreeapp.com/download/">SourceTree</a>
+<br>
+<br>I have used other GUI (like GITHUB for <a target="_blank" href="https://windows.github.com/">Windows</a> or <a target="_blank" href="https://mac.github.com/">MAC</a>), but being honest "SourceTree" is better and pretty simple for beginners. So just trust me and stick to SourceTree <i class="fa fa-smile-o"></i> .
+</p>
+</div>
+<!--//content-->
+</div>
+<!--//item-->
+<div class="item col-md-4 col-sm-6 col-xs-12">
+<div class="icon-holder">
+<i class="fa fa-crosshairs"></i>
+</div>
+<div class="content">
+<h3 class="sub-title">Configring GITHUB Account - SSH keys (Optional but Recommended)</h3>
+<p>Secure Shell or SSH is a network protocol that allows data to be exchanged using a secure channel between two network devices.
+<br>I <b>recommend</b> you to config your machine with SSH keys, that will basically provide confidentiality and integrity of data over an unsecured network.
+<br><b><u>How to Config for SSH</u></b> - <a target="_blank" href="https://help.github.com/articles/generating-ssh-keys/#platform-mac">MAC</a>, <a target="_blank" href="https://help.github.com/articles/generating-ssh-keys/#platform-windows">Windows</a> or <a target="_blank" href="https://help.github.com/articles/generating-ssh-keys/#platform-linux">Linux</a>
+</p>
+</div>
+<!--//content-->
+</div>
+<!--//item-->
+<!--  <div class="clearfix visible-md"></div>
+<div class="item col-md-4 col-sm-6 col-xs-12">
+<div class="icon-holder">
+<i class="fa fa-tablet"></i>
+</div>
+<div class="content">
+<h3 class="sub-title">Mobile-friendly</h3>
+<p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome</a> icons available.</p>
+</div> -->
+<!--//content-->
+<!-- </div> -->
+<!--//item-->
+<!--  <div class="item col-md-4 col-sm-6 col-xs-12">
+<div class="icon-holder">
+<i class="fa fa-code"></i>
+</div>
+<div class="content">
+<h3 class="sub-title">Easy to customise</h3>
+<p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome</a> icons available.</p>
+</div> -->
+<!--//content-->
+<!-- </div> -->
+<!--//item-->
+<!--   <div class="item col-md-4 col-sm-6 col-xs-12">
+<div class="icon-holder">
+<i class="fa fa-coffee"></i>
+</div>
+<div class="content">
+<h3 class="sub-title">LESS files included</h3>
+<p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome</a> icons available.</p>
+</div> -->
+<!--//content-->
+<!-- </div> -->
+<!--//item-->
+</div>
+<!--//row-->
+<!--        </div>-->
+<!--            //container-->
+</section>
+<!--//about-->
+<!-- ******FEATURES****** -->
+<section id="features" class="features section">
+<div class="container text-center">
+<h2 class="title">Features</h2>
+<ul class="feature-list list-unstyled">
+<li><i class="fa fa-check"></i> Quick Guide of GITHUB for Beginners</li>
+<li><i class="fa fa-check"></i> By Passing Terminal commands</li>
+<li><i class="fa fa-check"></i> Understanding how GIT and GITHUB works</li>
+<li><i class="fa fa-check"></i> Working well with Team Project</li>
+<li><i class="fa fa-check"></i> Less issues with GIT</li>
+<li><i class="fa fa-check"></i> Understanding the concept of GITHUB Management</li>
+</ul>
+</div>
+<!--//container-->
+</section>
+<!--//features-->
+<!-- ******DOCS****** -->
+<section id="docs" class="docs section">
+<div class="container">
+<div class="docs-inner">
+<h2 class="title text-center">Get Started</h2>
+<div class="block">
+<p class="text-center"><i>Before I start, I want to mention that I always recommend all to use terminal, just because that gives more base knowledge to what is happening while you work with GIT.<br><br>But this tutorial is focussing on those users who are new to GIT and need to understand GITHUB management in simple and easy way.</i>
+</p>
+<p class="text-center">At this point I am assumng you have configured your machine with GIT and Source Tree. If still have any issues or confussion get back to my <a class="scrollto" href="#Prerequisite">Prerequisite</a> section above.</p>
+<h3 class="sub-title text-center" id="goalsandteam">Goal and Team Members In this Tutorial <i class="fa fa-hand-o-up"></i></h3>
+<p><big><b><u>Goal</u></b></big> of this Tutorial is to help Students who started using GITHUB for their projects and are not very much familier with how to work with team using GITHUB. This ideal situation is in Colleges/Universities team projects.</p>
+<p><b><big><u>Team Members</u></big></b> : Following are the team members that are most commonly there in a software projects</p>
+<p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;<u>ScrumMaster/Customer</u> - The ScrumMaster is responsible for making sure a Scrum team lives by the values and practices of Scrum. The ScrumMaster does anything possible to help the team perform at their highest level. This involves removing any impediments to progress, facilitating meetings, making sure the product backlog is in good shape and ready for the next sprint/iteraion</p>
+<p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;<u>Developers</u> - We all know what they are and what they do <i class="fa fa-smile-o"></i>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Just to add to your thoughts, they say <big>"How can I make it?"</big>
+</p>
+<p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;<u>Testers</u> - We all know this as well, what they are and what they do <i class="fa fa-smile-o"></i>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;And they say <big>"How can I Break it?"</big>
+</p>
+<h2 class="sub-title text-center" id="settingupGIThub">Setting Up GITHUB <i class="fa fa-github"></i></h2>
+<br>
+<p>Now lets take a step forward and if you are Team's "ScrumMaster/Customer" then go to your <a href="" target="_blank">GITHUB</a> account and Log In.</p>
+<p>
+<BLOCKQUOTE>NOTE : Step 1 to 6 is specifically for ScrumMaster/Customer.</BLOCKQUOTE>
+</p>
+<br>
+<p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;You will see screen like below that will show your UserName on top right side of NavBar, Click On the <i class="fa fa-plus"></i> icon next to it and you will see DropDown Menu, click "New organization", as shown below.
+<img src="images/step1.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Next to this fill details in "Create an organization" page and click "Create Organization".
+<img src="images/step2.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Next, Invite other GITHUB users to your organization to add them as a contributer. You can search by their GIThub UserName. When you are done with inviting other users, click "Finish".
+<br>
+<blockquote>Note : You can Add or delete Contributers later also.</blockquote>
+<img src="images/step3.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;Next, you can create as many Repositories in this Organization, as you want by clicking the "New repository" button(in Green). Make sure you don't select "New repository" from nav bar as seen in Step 1.
+<br>
+<blockquote>
+<p>All repositories created under this organzation can be Accessed/Updated by all Contributers.</p>
+</blockquote>
+<img src="images/step4.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;Next, Open "Create new Repository" page and enter fields, As shown below.
+<br>
+<blockquote>
+<p>Note : At this step I assume you have correctly created Organization and then Repository/Repositories in that. Now make sure you add <big><b><u>.gitignore</u></b></big> file into your Repository (It's a good GITHUB/GIT practice). You can add via GIThub(as seen below) or from your project in your machine.</p>
+<p>In this Tutorial I will add ".gitignore" file from my machine.</p>
+</blockquote>
+<img src="images/step5.png" class="img-responsive" alt="">
+</p>
+<p id="settingupGIThubStep6">&emsp;&emsp;<span><big>6 .</big></span>&emsp;Clicking on "Create repository" will lead you to new created repository. Note, there are some GIT commands that you see in this picture below that is basically used to sync your project on your local machine to GIThub.
+<img src="images/step6.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>7 .</big></span>&emsp;Now lets take a Pause from GITHUB and setup our project environment on our Local Machine and we will get back to GITHUB after that. <i class="fa fa-smile-o"></i>
+</p>
+<br>
+<br>
+<h2 class="sub-title text-center" id="settingUpSourceTree">Setting Up SourceTree</h2>
+<br>
+<p>In this section we will see how to add our Local project and config it to the newly created GITHUB repository.</p>
+<p>At this point you should have configured your Source tree with your User Name and Password and other configuration if needed.</p>
+<blockquote><big><b>For this tutorial I will use an <u>Android Project</u> as a sample project, you can use any Project as your project.</b></big>
+</blockquote>
+<p>
+<BLOCKQUOTE>NOTE : Step 1 to 8 is specifically for ScrumMaster/Customer.</BLOCKQUOTE>
+</p>
+<p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;First Lets Create an Empty Folder and then create a new Android Project in that specific Location.
+<br>
+<blockquote>
+<p>At this point you should include ".gitignore" file in your project, as I mentioned above it is a good programming/GIT practice to this file. Refer to this to create one for your project - <a href="https://www.gitignore.io/" target="_blank"><i class="fa fa-git"></i></a>
+</p>
+</blockquote>
+</p>
+<img src="images/Sourcestep1.png" class="img-responsive" alt="">
+<p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Now Open SourceTree and click on "File" <i class="fa fa-angle-right"></i> "New / Clone", a drop down will open with various different options as seen below.
+<br>
+<blockquote>
+<p>As I am using MAC OS for this tutorial, so some of the UI element will not be same as of windows, but not to fear as they all are same for MAC and Windows and are easy understandable irrespective of UI.</p>
+</blockquote>
+<img src="images/Sourcestep2.png" class="img-responsive" alt="">
+</p>
+</p>
+<p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Click on "Add Existing Local repository" and choose the path where you have created your project, then click OK.
+<br>Then "Create a local repository" dialog will open as shown below, make sure you select "GIT" in type and uncheck "Also create remort repository" as we already have our remote repository set up earlier in "Setting up GITHUB" section.</p>
+<img src="images/Sourcestep3.png" class="img-responsive" alt="">
+<p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;Now here SourceTree is having your local repository, we will get into this in deep very soon but before that lets config our local repository to the GITHUB.</p>
+<img src="images/Sourcestep4.png" class="img-responsive" alt="">
+<p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;Now just click on "Settings" on top right corner side of SourceTree (can be seen in above image)
+<br>And you will see a dialog box like image below.</p>
+<img src="images/Sourcestep5.png" class="img-responsive" alt="">
+<p>&emsp;&emsp;<span><big>6 .</big></span>&emsp;Now click "Add" button and then go you your GIThub account where you have created your repository (in this case its "TestGITRepo1" Refer to : <a href="#settingupGIThubStep6" class="scrollto">Step 6</a> in - Setting up GITHUB)</p>
+<p>&emsp;&emsp;<span><big>7 .</big></span>&emsp;Now you copy https link from <a href="#settingupGIThubStep6" class="scrollto">Step 6</a> in - "Setting up GITHUB" into Source tree, and enter name of Repository(preferably same as in GITHUB)
+<br>
+<blockquote>
+<p>Note : You dont need to enter Host type, Host Root URL, and UserName (as all this is automatically configured accordingly)</p>
+</blockquote>
+<img src="images/Sourcestep7.png" class="img-responsive" alt="">
+<br>Now click "Ok". Now you have configured local repository path to remote repository path.
+<br>Click Ok and we good to go.
+<br>
+<img src="images/Sourcestep7-1.png" class="img-responsive" alt="">
+</p>
+<blockquote class="text-center">
+<big>Noticable thing is that we havn't used any GIT command till now and believe me we won't use it next as well.</big>
+</blockquote>
+<p id="Step8SourceTree">&emsp;&emsp;<span><big>8 .</big></span>&emsp;Now lets push code to your GITHUB repository
+<br>
+<blockquote>
+<p>Note, that you see "TestGITRepo1" under "Remotes" on left tab - That indicates that this SourceTree repo is configurd to "TestGITRepo1" repository.</p>
+<img src="images/Sourcestep8.png" class="img-responsive" alt="">
+</blockquote>
+<br>Now Move your files to Staging Enviornment by clicking "Unstaged files" check button
+<br>
+<img src="images/Sourcestep8-1.png" class="img-responsive" alt="">
+<br>Now enter your commit message in "Commit message" text box at the bottom.
+<img src="images/Sourcestep8-2.png" class="img-responsive" alt="">
+<br>Now click the "Commit" button next to it and you see this screen when you click on "master" on side bar.
+<img src="images/Sourcestep8-3.png" class="img-responsive" alt="">
+<blockquote>
+<p>Lets understand what is going on here
+<ol>
+<li>We created our Project</li>
+<li>We added all files to Staging</li>
+<li>We committed all added files to Staging</li>
+</ol>
+</p>
+</blockquote>
+<br>Now we want out GITHUB repository to get this code into master Branch. For that click on "master" <i class="fa fa-angle-right"></i> "Push to" <i class="fa fa-angle-right"></i> "TestGITRepo1", as shown below.
+<img src="images/Sourcestep8-4.png" class="img-responsive" alt="">
+<br>Now a dialog box will open, let every thing be on default.
+<img src="images/Sourcestep8-5.png" class="img-responsive" alt="">
+<br>Now click "Ok" and open your GIThub repository in Browser. It should show your code as in image below.
+<br>
+<blockquote>
+<p>Note : You may or may not be asked to enter your password of GITHUB.</p>
+</blockquote>
+<img src="images/Sourcestep8-6.png" class="img-responsive" alt="">
+<br>
+<blockquote class="text-center">
+<p><big><b><u>What Happened</u></b></big>
+</p>
+<p>You have created your project, commited to GIT and then Pushed the code to GITHUB into your <u>"master"</u> branch.</p>
+</blockquote>
+</p>
+<h2 class="sub-title text-center" id="teamtrick">Team Trick</h2>
+<p class="text-center"><big>We have seen that we pushed code to GIThub into master branch and out GIThub repository shows us the updated code, but the question is where other team members will push code.</big>
+</p>
+<p class="text-center"><big>Here is the Answer.</big>
+</p>
+<p>
+<BLOCKQUOTE>NOTE : Step 1 to 3 is specifically for ScrumMaster/Customer.</BLOCKQUOTE>
+</p>
+<p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;Now you go to your GIThub repository, click master branch and then enter the name of new branch in text field as shown below.
+<img src="images/Trick1.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Now the question is why are we creating new branches now, we could have done that in very first step when we created our repository.
+<br>The answer is clear when you will see the newly created branch.
+<img src="images/Trick2.png" class="img-responsive" alt="">
+<BLOCKQUOTE>You will see the new branches are exactly mirror image of master branch, with this we can make sure that we won't have conflict in our master branch which can be there if each developer create their own project and push to their own branch.<i class="fa fa-smile-o"></i>
+</BLOCKQUOTE>
+</p>
+<p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Similarly we can create as many branches as we needed, in this tutorial I will create total 2 branches.</p>
+<BLOCKQUOTE class="text-center">
+<big><b><u>Happy Note for ScrumMaster</u></b></big>
+<br>
+<big>I know until this point all work and management was done by ScrumMaster, but thats it ScrumMaster has done most part of managing GITHUB. It's turn to sit back and let developers do their code and play with GIThub. <u>Again, I said Play no Mess.</u></big>
+</BLOCKQUOTE>
+<h2 class="sub-title text-center" id="developersJob">Developers Job</h2>
+<p class="text-center"><big>What we did till this point?</big>
+<br>
+<ol>
+<li>ScrumMaster/Customer has created new repository under new organization</li>
+<li>Pushed first commited code to master branch of created repository</li>
+<li>Created new branchs on GIThub</li>
+</ol>
+<br><b>Now here is the next step towards our Final Goal but before that each Team Member need to understand these following important thing :
+<ol>
+<li><u>Master Branch is the branch where team will have its latest and greatest code</u>, that basically means that less buggy and more user accepted code.</li>
+<li><u>Developers should not push their code directly to master</u> branch.</li>
+<li>Each <u>developer should push their code to their respective assigned branches</u> only.</li>
+<li>Each <u>developer should pull code from master branch before they start new task</u>, or even better should pull code from master branch once a day.</li>
+</ol></b>
+<br>
+<p>
+<BLOCKQUOTE>NOTE : Step 1 to 5 is specifically for Developers.</BLOCKQUOTE>
+</p>
+<br>
+<p class="text-center">Now lets get back to what we were doing. Following steps are for <big><b><u>Developers</u></b></big><i class="fa fa-smile-o"></i>
+</p>
+</p>
+<p>&emsp;&emsp;<span><big>1 .</big></span>&emsp;At this point Developer has branches into their GITHUB account but dont have similar code in their local machine.
+<br>So the first step will be that they sync remote repository to their local machine so that they can start their work.
+<br>Now Open SourceTree and click on "File" <i class="fa fa-angle-right"></i> "New / Clone", a drop down will open with various different options as seen below.
+<img src="images/Sourcestep2.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;This time click on "Clone from URL", and you will see a dialog box somthing like this.
+<img src="images/DevelopersJob2.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;Now Go to GITHUB and copy HTTPS URL from right sidebar as seen in Image.
+<img src="images/DevelopersJob3.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;Now copy that URl to "Source URL", add "Destination Path" as you like (must be an empty folder) and Name of repository.
+<br>You can check out from different branches via going to Advance Options.
+<img src="images/DevelopersJob4.png" class="img-responsive" alt="">
+<br>Now click "Clone".
+</p>
+<p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;Lets see how your SourceTree looks like when you pulled all code from GIThub, and lets understand what is going on.
+<img src="images/DevelopersJob5.png" class="img-responsive" alt="">
+<br>See Left sidebar
+<ol>
+<li>Under Branches we have "master", that basically is the your local GIT branch on which you currently are.</li>
+<li>Under "origin" you see all the remote branches (One developer to one branch for entire project and no pushing or messing around with others branch <i class="fa fa-smile-o"></i>)</li>
+<li>Description box - that all remote branches (master, Developer_branch1, Developer_branch2) are same with your HEAD (your Local Branch)</li>
+</ol>
+</p>
+<h2 class="sub-title text-center" id="pushandPull">Push And Pull (Developers Job)</h2>
+<p class="text-center"><big>Now at this point ScrumMaster has latest code in its local repository and in Remote master Branch. And so as Developers have same code in their Local and Remote branches.<br>Now as a developer lets make some changes into our local branch and see what happens next.</big>
+</p>
+<p class="text-center">
+<blockquote>Note : Developers usually are assigned with some tasks and and according to that they make changes that they have completed some tasks that are assigned to them.</blockquote>
+</p>
+<p>
+<BLOCKQUOTE>NOTE : Step 1 to 8 is specifically for Developers.</BLOCKQUOTE>
+</p>
+<p id="Step1PushPull">&emsp;&emsp;<span><big>1 .</big></span>&emsp;Lets say as a developer you completed your task and have done <a href="http://searchsoftwarequality.techtarget.com/definition/unit-testing" target="_blank">Unit Testing</a> on your code and now you want your GIThub repository to have this updated code.
+<br>Here is how your SourceTree looks when you update project
+<img src="images/pushandPull1.png" class="img-responsive" alt="">
+<br>Lets explain what you see here
+<br>
+<ol>
+<li>You can see some uncommited files under Unstaged Section in lower section image, these are the files that are modified</li>
+<li>On lower right side you see your updated code that you updated(in this case its just dummy <i class="fa fa-smile-o"></i>)</li>
+<li>Under Description box you see its written "Uncommitted changes", that means you have some uncommited files on your local branch</li>
+</ol>
+</p>
+<p>&emsp;&emsp;<span><big>2 .</big></span>&emsp;Now add files to staging and then commit with a commit message as in image below, make sure "Push changes immediately to origin/Master" is unchecked and you don't push at this point.
+<img src="images/pushandPull2.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>3 .</big></span>&emsp;After you commit you see the Description box shows you are 1 commit ahead of master, and also shows your commit message.
+<img src="images/pushandPull3.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>4 .</big></span>&emsp;It's time to push code.
+<br>You go to Branches(loacal) <i class="fa fa-angle-right"></i> master <i class="fa fa-angle-right"></i>Push to <i class="fa fa-angle-right"></i> origin
+<img src="images/pushandPull4.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>5 .</big></span>&emsp;A dialog box will open. Under Remote branch you will see all remote branches.
+<br>Select the one that belongs to you.
+<br>And press "Ok"
+<img src="images/pushandPull5.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>6 .</big></span>&emsp;Now go to GITHUB to your repository, you will see something like below.
+<img src="images/pushandPull6.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>7 .</big></span>&emsp;Click on "Compare and Pull request"
+<br>You will see something like below
+<img src="images/pushandPull7.png" class="img-responsive" alt="">
+</p>
+<p id="Step8PushPull">&emsp;&emsp;<span><big>8 .</big></span>&emsp;Now click on "Create pull request" (You can add Write comments to this pull request before you want to create one)
+<br>Now you will see something like this
+<br>This Pull request can be assigned to ScrumMaster/Customer by clicking on Assignee and then assign him/her this task.
+<br><big>In any case only ScrumMaster should do next steps on Pull request</big>
+<img src="images/pushandPull8.png" class="img-responsive" alt="">
+</p>
+<p class="text-center">
+<blockquote class="text-center">
+<p><b><big>Up to this step Developer has pushed code and then send a Pull Request to ScrumMaster</big></b>
+</p>
+<p><b><big>Now From Step 9 to <a href="">asdahsgdjhags</a> ScrumMaster/Customer is back on work.</big></b>
+</p>
+</blockquote>
+</p>
+<p id="Step9PushPull">&emsp;&emsp;<span><big>9 .</big></span>&emsp;Now ScrumMaster will see 1 Pull request on right side bar as in image below
+<img src="images/pushandPull9.png" class="img-responsive" alt="">
+<br>ScrumMaster clicks on that pull request, and opens that pull request as in image below
+<br>
+<blockquote>
+<p>Note : If there is any conflict then GITHUB will block "Merge pull request" button, so to avoid this make sure you understand what the flow is</p>
+</blockquote>
+<img src="images/pushandPull10.png" class="img-responsive" alt="">
+<br>Now if ScrumMaster wants to check code (if its according to task given) then ScrumMaster can click on "File Changed" and view code. Otherwise ScrumMaster clicks on "Merge pull request" and then can "Confirm merge"
+<img src="images/pushandPull11.png" class="img-responsive" alt="">
+<br>Now When ScrumMaster see repository home page it should show you the added code (you can check from comment"First Developer Push") like in image below.
+<img src="images/pushandPull12.png" class="img-responsive" alt="">
+</p>
+<blockquote>
+<p>What happened till now
+<ol>
+<li>Developer 1 Pushed code to its Remote Branch</li>
+<li>Gave Pull request to ScrumMaster/Customer</li>
+<li>ScrumMaster then Compare the Code and Merge Request</li>
+</ol>
+<big><b>So we can say now Master Branch has code of First commit and Commit made by Developer 1, in short <u>master branch has latest and greatest code</u></b></big>
+</p>
+</blockquote>
+<p>&emsp;&emsp;<span><big>10 .</big></span>&emsp;Now Developer 2 will pull code from this latest Remote master into its local repository and will get the latest code which includes the code from Developer 1 as well.
+<br>You will get a dialog box asking you to confirm pull, hit "Ok"
+<img src="images/pushandPull13.png" class="img-responsive" alt="">
+</p>
+<p>&emsp;&emsp;<span><big>11 .</big></span>&emsp;Now Developer 2 will complete his/her task and Now Developer 2 will repeat same steps as did by Developer 1 from <a href="#Step1PushPull" class="scrollto">Step 1</a> to <a href="#Step8PushPull" class="scrollto">Step 8</a> above.</p>
+<p>&emsp;&emsp;<span><big>12 .</big></span>&emsp;After Developer 2 completes step 1 - 8 then ScrumMaster will repeat <a href="#Step9PushPull" class="scrollto">Step 9</a>
+</p>
+<blockquote class="text-center"><big><b>This loop between <a href="#Step1PushPull" class="scrollto">Step 1</a> to <a href="#Step9PushPull" class="scrollto">Step 9</a> should be there between each developers and ScrumMaster through out the project<br>This makes sure that your master Branch has latest and greatest code for your Release.</b></big>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<!--//features-->
+<!-- ******LICENSE****** -->
+<section id="license" class="license section">
+<div class="container">
+<div class="license-inner">
+<h2 class="title text-center">Reasons and Options</h2>
+<div class="info">
+<p>The Basic reason of using this method over "fork and pull"
+<br>
+<ol>
+<li>Gives you better understanding of GIT and GIThub</li>
+<li>Lets you organize in smooth way, as ScrumMaster is the only who will merge code, so you get less buggy code</li>
+<li>Less pain in understanding code and who is working on what</li>
+<li>And Fun <i class="fa fa-smile-o"></i>
+</li>
+</ol>
+</p>
+</div>
+<!--//info-->
+<!-- <div class="cta-container">
+<div class="speech-bubble">
+<p class="intro">If you are feeling generous and want to show your support to Xiaoying, you can buy her a beer or coffee via the PayPal donate button below. :)</p>
+<div class="icon-holder  text-center"><i class="fa fa-smile-o"></i>
+</div>
+</div> -->
+<!--//speech-bubble-->
+<!-- <div class="btn-container  text-center"> -->
+<!--//You need to generate your own PayPal button - https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside -->
+<!--PayPal generated code starts-->
+<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="Y46LJNXGAVVWW">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form> -->
+<!--//PayPal generated code ends-->
+<!-- </div> -->
+<!--//btn-container-->
+<!-- </div>  -->
+<!--//cta-container-->
+</div>
+<!--//license-inner-->
+</div>
+<!--//container-->
+</section>
+<!--//how-->
+<!-- ******CONTACT****** -->
+<section id="contact" class="contact section has-pattern">
+<div class="container">
+<div class="contact-inner">
+<h2 class="title  text-center">Contact</h2>
+<p class="intro  text-center">I hope you find this tutorial useful.
+<br />Feel free to get in touch if you have any questions or suggestions.</p>
+<div class="author-message">
+<div class="profile">
+<img class="img-responsive" src="images/profile.jpg" alt="" />
+</div>
+<!--//profile-->
+<div class="speech-bubble">
+<h3 class="sub-title">Get in Touch</h3>
+<p>If you like what I do, you can mail me on <a href="mailto:jagdeepmatharu@gmail.com">JagdeepMatharu88@gmail.com</a> or follow me on <a href="https://github.com/jmatharu" target="_blank">GITHUB</a> and I will keep you informed about my next tutorial <i class="fa fa-smile-o"></i>
+</p>
+<p><strong>Tip for Teams:</strong> You will learn step by step, be patient and focused on work that you do, Managing GIThub is pretty simple and pain at same time. All that decide what it will be is "How good you understand GITHUB/GIT flow" and ofcourse "What your professor wants <i class="fa fa-smile-o"></i>"</p>
+<div class="source">
+<span class="name"><a href="/">Jagdeep Matharu</a></span>
+<br />
+<span class="title">Tester / Developer / FreeLancer</span>
+</div>
+<!--//source-->
+</div>
+<!--//speech-bubble-->
+</div>
+<!--//author-message-->
+<div class="clearfix"></div>
+<div class="info text-center">
+<h4 class="sub-title">Get Connected</h4>
+<ul class="social-icons list-inline">
+<li><a href="https://github.com/jmatharu" target="_blank"><i class="fa fa-github"></i></a>
+</li>
+<li><a href="https://www.facebook.com/JagDeepSingh7" target="_blank"><i class="fa fa-facebook"></i></a>
+</li>
+<li><a href="https://www.linkedin.com/pub/jagdeep-matharu/74/ab7/156"><i class="fa fa-linkedin"></i></a>
+</li>
+<li><a href="https://instagram.com/jmatharu88/"><i class="fa fa-instagram"></i></a>
+</li>
+<li class="last"><a href="mailto:jagdeepmatharu@gmail.com"><i class="fa fa-envelope"></i></a>
+</li>
+</ul>
+</div>
+<!--//info-->
+</div>
+<!--//contact-inner-->
+</div>
+<!--//container-->
+</section>
+<!--//contact-->
+<!-- counter Code START -->
+<div align=center>
+<br>
+<p>Visitor Count <i class="fa fa-hand-o-right"></i> <img src='http://www.counter12.com/img-AccZZy5w-2.gif' border='2' alt='free counter'>
+</p>
+<script type='text/javascript' src='http://www.counter12.com/ad.js?id=AccZZy5w'></script>
+</div>
+<!-- ******LICENSE****** -->
+<section id="license" class="license section">
+<div class="container">
+<div class="license-inner">
+<h2 class="title text-center">Comments</h2>
+<form class="form-horizontal" name="myForm" ng-app="chatApp">
+<div ng-controller="chatController">
+<ul>
+<li ng-repeat="message in messages">
+{{message.text}} <small><small>by <b>{{message.user}}</b></small></small>
+<!--                                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{getDatetime | date:'yyyy-MMM-dd, hh:mm:ss a'}}-->
+<hr>
+</li>
+</ul>
+<div class="form-group">
+<label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+<div class="col-sm-10">
+<input type="text" ng-model="newmessage.user" class="form-control" id="inputEmail3" placeholder="Name" required>
+</div>
+</div>
+<div class="form-group">
+<label for="inputEmail3" class="col-sm-2 control-label">Comment</label>
+<div class="col-sm-10">
+<input type="text" ng-model="newmessage.text" class="form-control input-lg" id="inputEmail3" placeholder="Comment" required>
+</div>
+</div>
+<div class="form-group">
+<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+<div class="col-sm-10">
+<input type="text" ng-model="newmessage.email" class="form-control" id="inputEmail3" placeholder="Email (Will be kept Private)" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+<span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
+</div>
+</div>
+<button class="btn btn-success" ng-click="inserisci(newmessage)" ng-disabled="myForm.$invalid">Send</button>
+</div>
+</form>
+</div>
+</div>
+<!--//container-->
+</section>
+<!-- ******FOOTER****** -->
+<footer class="footer">
+<div class="container text-center">
+<small class="copyright">Tutorial Created by <a href="/" >Jagdeep Matharu</a></small>
+</div>
+<div class="container text-center">
+<span class='st_sharethis_large' displayText='ShareThis'></span>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_googleplus_large' displayText='Google +'></span>
+<span class='st_linkedin_large' displayText='LinkedIn'></span>
+<span class='st_evernote_large' displayText='Evernote'></span>
+<span class='st_pinterest_large' displayText='Pinterest'></span>
+<span class='st_blogger_large' displayText='Blogger'></span>
+<span class='st_email_large' displayText='Email'></span>
+<span class='st_whatsapp_large' displayText='WhatsApp'></span>
+<span class='st_tumblr_large' displayText='Tumblr'></span>
+<span class='st_flipboard_large' displayText='Flipboard'></span>
+</div>
+<!--//container-->
+</footer>
+<!--//footer-->
+<!-- Javascript -->
+<script type="text/javascript" src="plugins/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="plugins/prism/prism.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- Manual JavaScript -->
+<script type="text/javascript" src="js/bootstrap-lightbox.js"></script>
+<script type="text/javascript" src="js/bootstrap-lightbox.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.2.2/ekko-lightbox.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function ($) {
+// delegate calls to data-toggle="lightbox"
+$(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function (event) {
+event.preventDefault();
+return $(this).ekkoLightbox({
+onShown: function () {
+if (window.console) {
+return console.log('Checking our the events huh?');
+}
+},
+onNavigate: function (direction, itemIndex) {
+if (window.console) {
+return console.log('Navigating ' + direction + '. Current item: ' + itemIndex);
+}
+}
+});
+});
+//Programatically call
+$('#open-image').click(function (e) {
+e.preventDefault();
+$(this).ekkoLightbox();
+});
+$('#open-youtube').click(function (e) {
+e.preventDefault();
+$(this).ekkoLightbox();
+});
+$(document).delegate('*[data-gallery="navigateTo"]', 'click', function (event) {
+event.preventDefault();
+return $(this).ekkoLightbox({
+onShown: function () {
+var a = this.modal_content.find('.modal-footer a');
+if (a.length > 0) {
+a.click(function (e) {
+e.preventDefault();
+this.navigateTo(2);
+}.bind(this));
+}
+}
+});
+});
+});
+</script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script>
+(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-43208246-2', 'ashleydw.github.io');
+ga('send', 'pageview');
+</script>
+<!-- Custom Theme JavaScript -->
+<script src="js/clean-blog.min.js"></script>
+<script type="text/javascript">
+stLight.options({
+publisher: "397ecdb4-80d5-4013-9922-2d7c9d615bee",
+doNotHash: false,
+doNotCopy: false,
+hashAddressBar: false
+});
+</script>
+<script>
+var options = {
+"publisher": "397ecdb4-80d5-4013-9922-2d7c9d615bee",
+"position": "left",
+"ad": {
+"visible": false,
+"openDelay": 5,
+"closeDelay": 0
+},
+"chicklets": {
+"items": ["facebook", "twitter", "linkedin", "googleplus", "blogger", "pinterest", "email", "sharethis", "evernote"]
+}
+};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
 </body>
-
 </html>
