@@ -21,7 +21,7 @@ app.controller('chatController', ['$scope', 'Message', function ($scope, Message
 
 app.factory('Message', ['$firebase',
  function ($firebase) {
-        var ref = new Firebase('https://bloggit.firebaseio.com/');
+        var ref = new Firebase('https://mainportfolio.firebaseio.com/git');
         var messages = $firebase(ref.child('messages')).$asArray();
 
         var Message = {

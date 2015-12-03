@@ -16,12 +16,11 @@ app.controller('chatController', ['$scope', 'Message', function ($scope, Message
         Message.create(message);
         $scope.newmessage = defaultForm;
     };
-    //   $scope.getDatetime = new Date();
  }]);
 
 app.factory('Message', ['$firebase',
  function ($firebase) {
-        var ref = new Firebase('https://bloggitmanagement.firebaseio.com/');
+        var ref = new Firebase('https://mainportfolio.firebaseio.com/githubmanagement');
         var messages = $firebase(ref.child('messages')).$asArray();
 
         var Message = {
